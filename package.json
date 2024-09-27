@@ -1,5 +1,6 @@
 {
   "name": "downshift2",
+  "homepage": "https://Epyon616.github.io/downshift/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,11 +8,15 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
+    "github-pages": "^3.0.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-obfuscate-email": "^1.1.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
