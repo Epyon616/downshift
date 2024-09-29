@@ -1,0 +1,54 @@
+@import '../../Sass/Abstracts/Variables';
+
+.branding {
+  font-size: 4rem;
+  height: 2em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: screen;
+  
+  &.xl {
+    font-size: 12rem;
+
+    @media screen and (max-width: 900px) {
+      font-size: 6rem;
+    }
+  }
+
+  span {
+    font-weight: 900;
+    font-style: italic;
+    display: block;
+    position: absolute;
+    letter-spacing: -0.005em;
+
+    &::before, 
+    &::after {
+      content: attr(data-text);
+      display: block;
+      position: relative;
+      padding: 0 0.1em;
+      z-index: 1;
+    }
+
+    &::before {
+      position: absolute;
+      -webkit-text-stroke: 0.1em black;
+      z-index: 0;
+    }
+
+    &:first-child {
+      color: $dark-green;
+      transform: translate(-0.155em, -0.255em);
+    }
+    
+    &:last-child {
+      color: $pale-green;
+      transform: translate(0.155em, 0.255em);
+    }
+  }
+}
+  
+ 

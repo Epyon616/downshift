@@ -1,16 +1,14 @@
 import { Email } from 'react-obfuscate-email';
-import './App.css'
+import Branding from './Components/Brand';
+import './App.scss'
 
 
-function App() {
+const App = () => {
   return (
     <>
       <div className='header hazard-background'>&nbsp;</div>
       <div className="content">
-        <div className="logo">
-          <span data-text="DOWN"></span>
-          <span data-text="SHIFT"></span>
-        </div>
+        <Branding size="xl" />
         <div className="code-text">
           <h2>The home of full stack developer Lee Richmond</h2>
           <p>My website is currently undergoing some exciting changes, but don't worry - it will be back online very soon!</p> 

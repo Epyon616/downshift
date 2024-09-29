@@ -1,0 +1,74 @@
+@import './Sass/reset.scss';
+@import './Sass/Abstracts/Variables';
+
+/* Layout */
+body {
+  background: $darkest-green;
+}
+#root {
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+}
+
+.content {
+  max-width: 1280px;
+  height: auto;
+  margin: 10vh auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+}
+
+
+/* Typography */
+strong {
+  font-weight: 900;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3rem;
+}
+ 
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  margin: 1.5rem;
+}
+
+a {
+  color: palegreen;
+  font-weight: 600;
+}
+
+
+.hazard-background {
+  height: 30px;
+  padding: 5px;
+  width: 100%;
+  margin: 0 auto;
+  background-image: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 20px,
+    $pale-green 20px,
+    $pale-green-light 40px
+  );
+}
+
+.code-text {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
