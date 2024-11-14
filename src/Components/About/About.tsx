@@ -1,6 +1,6 @@
-import { useContext } from "react";
+import { useContext } from 'react';
 import { Email } from 'react-obfuscate-email';
-import { ConfigContext } from "../Contexts";
+import { ConfigContext } from '../Contexts';
 
 const AboutSection = () => {
   const { configs } = useContext(ConfigContext);

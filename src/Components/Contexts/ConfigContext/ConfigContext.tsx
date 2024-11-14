@@ -1,13 +1,13 @@
-import { createContext } from "react";
-import { ConfigContextState } from "./types";
+import { createContext } from 'react';
+import { ConfigContextState } from './types';
 
 const contextDefaultValues: ConfigContextState = {
   configs: {
-    name: "",
-    domain: "",
+    name: '',
+    domain: '',
     email: {
-      address: "",
-      subject: ""
+      address: '',
+      subject: ''
     }
   }
 };

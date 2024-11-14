@@ -1,2 +1,2 @@
-import { ConfigContext, ConfigsProvider} from "./ConfigContext";
+import { ConfigContext, ConfigsProvider} from './ConfigContext';
 export { ConfigContext, ConfigsProvider };

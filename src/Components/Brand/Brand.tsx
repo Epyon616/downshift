@@ -8,7 +8,7 @@ const Branding = ({ size }: BrandingType) => {
   const sizeClass = size ? size : '';
   
   return (
-    <div className={"branding " + sizeClass}>
+    <div className={'branding ' + sizeClass}>
       <span data-text="DOWN"></span>
       <span data-text="SHIFT"></span>
     </div>

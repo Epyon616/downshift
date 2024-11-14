@@ -1,2 +1,2 @@
-import Branding from "./Brand";
+import Branding from './Brand';
 export default Branding;

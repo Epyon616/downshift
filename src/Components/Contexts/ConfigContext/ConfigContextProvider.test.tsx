@@ -1,8 +1,8 @@
-import { render } from "@testing-library/react";
-import { useContext } from "react";
-import ConfigContext from "./ConfigContext";
-import ConfigsProvider from "./ConfigContextProvider";
-import configData from '../../../../public/conf/config.json';
+import { render } from '@testing-library/react';
+import { useContext } from 'react';
+import ConfigContext from './ConfigContext';
+import ConfigsProvider from './ConfigContextProvider';
+import configData from '../../../conf/config.json';
 
 const TestComponent = () => {
   const { configs } = useContext(ConfigContext);

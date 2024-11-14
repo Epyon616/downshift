@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 export type SiteConfig = {
   name: string,
@@ -11,7 +11,7 @@ export type SiteConfig = {
 
 export type ConfigObject = {
   key: string
-  value: string | number | string[] | number[]|Record<string, unknown>  
+  value: unknown 
 };
 
 export type ConfigContextState = {

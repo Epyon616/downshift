@@ -1,6 +1,6 @@
-import { useState, FC } from "react";
-import { ProviderPorps, SiteConfig } from "./types";
-import ConfigContext from "./ConfigContext";
+import { useState, FC } from 'react';
+import { ProviderPorps, SiteConfig } from './types';
+import ConfigContext from './ConfigContext';
 
 const ConfigsProvider: FC<ProviderPorps> = (props) => {
   const [configs] = useState<SiteConfig>(props.configJson);

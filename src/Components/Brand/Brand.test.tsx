@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Branding from "./Brand";
+import Branding from './Brand';
 
 describe('Branding', () => {
   test('should render correctly', () => {
