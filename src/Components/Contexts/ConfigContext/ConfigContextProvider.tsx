@@ -1,16 +1,12 @@
 import { useState, FC } from "react";
-import { ProviderPorps, ConfigObject } from "./types";
+import { ProviderPorps, SiteConfig } from "./types";
 import ConfigContext from "./ConfigContext";
 
 const ConfigsProvider: FC<ProviderPorps> = (props) => {
-  const [configs, setConfigs] = useState<any>(props.configJson);
-  const addConfig = (prevConfig:any, newConfig: ConfigObject) => {
-   prevConfig[newConfig.key] = newConfig.value;
-   setConfigs(prevConfig);
-}
+  const [configs] = useState<SiteConfig>(props.configJson);
 
 return (
-    <ConfigContext.Provider value={{configs,addConfig}}>
+    <ConfigContext.Provider value={{configs}}>
       {props.children}
     </ConfigContext.Provider>
   );
