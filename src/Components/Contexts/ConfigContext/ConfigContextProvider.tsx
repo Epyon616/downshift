@@ -5,7 +5,7 @@ import ConfigContext from "./ConfigContext";
 const ConfigsProvider: FC<ProviderPorps> = (props) => {
   const [configs] = useState<SiteConfig>(props.configJson);
 
-return (
+  return (
     <ConfigContext.Provider value={{configs}}>
       {props.children}
     </ConfigContext.Provider>
