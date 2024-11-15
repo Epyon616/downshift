@@ -11,12 +11,12 @@ describe('Branding', () => {
  describe('size prop', () => {
   test('should not add an extra class if not defined', () => {
     const { container } = render(<Branding />);
-    expect(container?.firstChild).toHaveClass('branding');
+    expect(container.firstChild).toHaveClass('branding');
   });
 
   test('should add an extra class when defined', () => {
     const { container } = render(<Branding size="xl" />);
-    expect(container?.firstChild).toHaveClass('branding xl');
+    expect(container.firstChild).toHaveClass('branding xl');
   });
  });
 });
