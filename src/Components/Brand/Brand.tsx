@@ -9,8 +9,8 @@ const Branding = ({ size }: BrandingType) => {
   
   return (
     <div className={'branding ' + sizeClass}>
-      <span data-text="DOWN"></span>
-      <span data-text="SHIFT"></span>
+      <span aria-label="DOWN"></span>
+      <span aria-label="SHIFT"></span>
     </div>
   )
 };

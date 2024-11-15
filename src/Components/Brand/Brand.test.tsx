@@ -1,11 +1,11 @@
-import { render } from '@testing-library/react';
+import { render , screen } from '@testing-library/react';
 import Branding from './Brand';
 
 describe('Branding', () => {
   test('should render correctly', () => {
       render(<Branding />);
-      expect(document.querySelector('[data-text="DOWN"')).toBeInTheDocument();
-      expect(document.querySelector('[data-text="SHIFT"')).toBeInTheDocument();
+      expect(screen.getByLabelText('DOWN')).toBeInTheDocument();
+      expect(screen.getByLabelText('SHIFT')).toBeInTheDocument();
   });
 
  describe('size prop', () => {
