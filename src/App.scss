@@ -1,44 +1,5 @@
 @import './Sass/reset.scss';
 @import './Sass/Abstracts/Variables';
-@import './Sass/Layout/Layout.scss';
+@import './Sass/Layout/Layout';
+@import './Sass/Typography/Typography';
 
-/* Typography */
-body {
-  font-family: $lora;
-}
-strong {
-  font-weight: $strongest;
-}
-
-h1, h2, h3 {
-  font-weight: $strong;
-}
-
-h1 {
-  font-size: 3rem;
-}
- 
-h2 {
-  font-size: 2.4rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
-p {
-  margin: 1.5rem;
-}
-
-a {
-  color: $pale-green;
-  font-weight: $strong;
-}
-
-em {
-  font-style: italic;
-}
-
-.code-text {
-  font-family: $lora;
-}
