@@ -45,12 +45,12 @@
     }
 
     &:first-child {
-      color: $dark-green;
+      color: $light-purple;
       transform: translate(-1em, -0.245em);
     }
     
     &:last-child {
-      color: $pale-green;
+      color: $lightest-purple;
       transform: translate(1em, 0.255em);
     }
   }
