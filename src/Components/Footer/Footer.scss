@@ -1,0 +1,12 @@
+@import '../../Sass/Abstracts/Variables';
+
+.footer {
+  width: 100%;
+  height: 20px;
+  background: white;
+
+  p {
+    font-family: $lora;
+    color: $white;
+  }
+}

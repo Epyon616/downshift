@@ -1,8 +1,5 @@
-import './styles.scss';
-
-type BrandingType = {
-  size?: 'xs' | 'xl';
-};
+import { BrandingType } from './types';
+import './Brand.scss';
 
 const Branding = ({ size }: BrandingType) => {
   const sizeClass = size ? size : '';

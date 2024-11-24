@@ -13,15 +13,16 @@
     font-size: 12rem;
 
     @media screen and (max-width: 900px) {
-      font-size: 6rem;
+      font-size: 4rem;
     }
   }
 
   &.xs {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   span {
+    font-family: $rubik;
     font-weight: 900;
     font-style: italic;
     display: block;

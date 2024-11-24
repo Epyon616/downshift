@@ -3,6 +3,9 @@
 @import './Sass/Layout/Layout.scss';
 
 /* Typography */
+body {
+  font-family: $lora;
+}
 strong {
   font-weight: $strongest;
 }
@@ -34,20 +37,6 @@ a {
 
 em {
   font-style: italic;
-}
-
-.hazard-background {
-  height: 30px;
-  padding: 5px;
-  width: 100%;
-  margin: 0 auto;
-  background-image: repeating-linear-gradient(
-    -55deg,
-    transparent,
-    transparent 20px,
-    $pale-green 20px,
-    $pale-green-light 40px
-  );
 }
 
 .code-text {
