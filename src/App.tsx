@@ -12,6 +12,9 @@ const App = () => {
         <Branding size="xl" />
         <AboutSection />
       </div>
+      <footer>
+        <Branding size="xs" />
+      </footer>
     </>
   )
 }

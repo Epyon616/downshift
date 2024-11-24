@@ -1,7 +1,7 @@
 import './styles.scss';
 
 type BrandingType = {
-  size?: string;
+  size?: 'xs' | 'xl';
 };
 
 const Branding = ({ size }: BrandingType) => {

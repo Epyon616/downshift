@@ -1,38 +1,14 @@
 @import './Sass/reset.scss';
 @import './Sass/Abstracts/Variables';
-
-/* Layout */
-body {
-  background: $darkest-green;
-}
-#root {
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 16px;
-}
-
-.content {
-  max-width: 1280px;
-  height: auto;
-  margin: 10vh auto;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-}
-
+@import './Sass/Layout/Layout.scss';
 
 /* Typography */
 strong {
-  font-weight: 900;
+  font-weight: $strongest;
 }
 
 h1, h2, h3 {
-  font-weight: 700;
+  font-weight: $strong;
 }
 
 h1 {
@@ -40,6 +16,10 @@ h1 {
 }
  
 h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
   font-size: 2rem;
 }
 
@@ -48,10 +28,13 @@ p {
 }
 
 a {
-  color: palegreen;
-  font-weight: 600;
+  color: $pale-green;
+  font-weight: $strong;
 }
 
+em {
+  font-style: italic;
+}
 
 .hazard-background {
   height: 30px;
@@ -68,7 +51,5 @@ a {
 }
 
 .code-text {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: $lora;
 }
-
-

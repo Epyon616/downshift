@@ -17,6 +17,10 @@
     }
   }
 
+  &.xs {
+    font-size: 1.2rem;
+  }
+
   span {
     font-weight: 900;
     font-style: italic;
@@ -41,12 +45,12 @@
 
     &:first-child {
       color: $dark-green;
-      transform: translate(-0.155em, -0.255em);
+      transform: translate(-1em, -0.255em);
     }
     
     &:last-child {
       color: $pale-green;
-      transform: translate(0.155em, 0.255em);
+      transform: translate(1em, 0.255em);
     }
   }
 }

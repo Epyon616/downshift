@@ -1,0 +1,24 @@
+body {
+  background-image: linear-gradient($darkest-green, black);
+  font-size: 16px;
+}
+
+#root {
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content {
+  max-width: 1280px;
+  height: auto;
+  min-height: 75vh;
+  margin: 5vh auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+}
