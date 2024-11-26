@@ -2,3 +2,9 @@
 @import './Sass/Abstracts/Variables';
 @import './Sass/Layout/Layout';
 @import './Sass/Typography/Typography';
+
+.content-section {
+  width: 100vw;
+  padding: 50px 0;
+  background-color: $black;
+}

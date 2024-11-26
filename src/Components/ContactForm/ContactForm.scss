@@ -1,0 +1,55 @@
+@import '../../Sass/Abstracts/Variables';
+
+.contact-form {
+  width: 50vw;
+  margin: 0 auto;
+ 
+  div {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    row-gap: 20px;
+    height: auto;
+  }
+
+  label, input, button {
+    font-size: 1.4rem;
+    height: 50px;
+  }
+
+  label {
+    font-weight: $strongest;
+    margin-right: 20px;
+    padding-top: 10px;
+    text-align: left;
+  }
+
+  input, textarea {
+    padding: 0 15px;
+    border: 1px solid $light-purple;
+    border-radius: 5px;
+    background: $dark-purple;
+    color: $white;
+    &::placeholder {
+      color: $lightest-purple;
+    }
+  }
+
+  textarea {
+    font-size: 1.4rem;
+    height: 300px;
+    padding: 15px;
+    font-family: sans-serif;
+  }
+
+  input[type="submit"] {
+    background-color: $light-purple;
+    color: $white;
+    width: 100%;
+    margin-top: 20px;
+
+    &:disabled {
+      background-color: $lightest-purple;
+      color: $light-purple;
+    }
+  }
+}
