@@ -9,12 +9,30 @@ type TextInputType = {
   required: boolean
 }
 
-const TextInput = ({ handleChange, label, value, type, fieldName, placeholderText, required }:TextInputType) => {
+const TextInput = ({ 
+  handleChange, 
+  label, 
+  value, 
+  type, 
+  fieldName, 
+  placeholderText, 
+  required 
+}:TextInputType) => {
   return (
     <div>
-    <label htmlFor={fieldName}>{label}:</label>
-    <input type={type} name={fieldName} placeholder={placeholderText} onChange={handleChange} value={value} required={required} />
-  </div>
+      <label htmlFor={fieldName}>{label}</label>
+      <input 
+        id={fieldName} 
+        type={type} 
+        name={fieldName} 
+        aria-label={label}
+        aria-labelledby={label} 
+        placeholder={placeholderText} 
+        onChange={handleChange} 
+        value={value} 
+        required={required} 
+      />
+    </div>
   );
 }
 
