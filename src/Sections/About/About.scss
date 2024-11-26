@@ -1,8 +1,8 @@
 .about-content {
-  @media screen and (max-width: 1024px) {
-    p {
-      font-size: 2rem;
-      line-height: 155%;
-    }
-  } 
+  max-width: 90vw;
+  margin: 0 auto;
+
+  h2 {
+    margin-bottom: 50px;
+  }
 }

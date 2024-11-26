@@ -3,7 +3,6 @@
 .branding {
   font-size: 4rem;
   height: 2em;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,8 +11,12 @@
   &.xl {
     font-size: 12rem;
 
-    @media screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1024px) {
       font-size: 8rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+      font-size: 4rem;
     }
   }
 

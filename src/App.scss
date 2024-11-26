@@ -5,6 +5,11 @@
 
 body {
   background-color: $black;
+
+  p {
+    line-height: 155%;
+    margin-bottom: 25px;
+  }
 }
 .content-section {
   width: 100vw;
