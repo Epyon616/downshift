@@ -11,23 +11,31 @@ strong {
   font-weight: $strongest;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: $rubik;
-  font-weight: $strong;
+  font-weight: $strongest;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 2rem;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
 }
  
 h2 {
-  font-size: 2.4rem;
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: 4rem;
-  text-transform: uppercase;
-  font-weight: 900;
+  font-size: 2.5rem;
+
+}
+
+h4 {
+  font-size: 2rem;
 }
 
 a {
