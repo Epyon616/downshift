@@ -2,7 +2,6 @@ import { useState, useContext } from 'react';
 import emailjs from '@emailjs/browser'
 import { ContactFormState } from './types';
 import { ConfigContext } from '../Contexts';
-
 import { TextInput, TextArea, SubmitButton } from '../FormElements';
 
 import './ContactForm.scss';
@@ -10,13 +9,15 @@ import './ContactForm.scss';
 const ContactForm = () => {
   const { configs } = useContext(ConfigContext);
 
-  const defaultData = {name: '',
+  const defaultData = {
+    name: '',
     email: '',
     contactNo: '',
     message: ''
   };
 
   const [formData, setFormData] = useState<ContactFormState> (defaultData);
+  const [showNotification, setShowNotification] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const {name, value} = e.target;
@@ -44,6 +45,7 @@ const ContactForm = () => {
     ).then(
       () => {
         console.log('SUCCESS!');
+        setShowNotification(!showNotification);
         setFormData(defaultData);
       },
       (error) => {
@@ -53,48 +55,53 @@ const ContactForm = () => {
   }
 
   return (
-    <form className="contact-form" method="POST">
-      <TextInput 
-        label="Name" 
-        type="text" 
-        fieldName="name" 
-        placeholderText="your name" 
-        handleChange={handleChange} 
-        value={formData.name} 
-        required 
-      /> 
-      <TextInput 
-        label="Email" 
-        type="text" 
-        fieldName="email" 
-        placeholderText="name@domain.com" 
-        handleChange={handleChange} 
-        value={formData.email} 
-        required 
-      />
-      <TextInput 
-        label="Contact No" 
-        type="text" 
-        fieldName="contactNo" 
-        placeholderText="Your contact number" 
-        handleChange={handleChange} 
-        value={formData.contactNo} 
-        required 
-      />
-      <TextArea 
-        label="Message" 
-        fieldName="message" 
-        placeholderText="Your message" 
-        handleChange={(e) => handleChange(e)} 
-        value={formData.message} 
-        required 
-      />
-      <SubmitButton 
-        value={submitLabel} 
-        handleSubmit={(e) => handleSubmit(e)}
-        disabled={isDisabled()}
-      />
-    </form>
+    <div className="contact-form">
+      <div className={'notification' + (showNotification ? ' show' : '')}>
+        Thank you! I'll be in touch soon!
+      </div>
+      <form  method="POST">
+        <TextInput 
+          label="Name" 
+          type="text" 
+          fieldName="name" 
+          placeholderText="your name" 
+          handleChange={handleChange} 
+          value={formData.name} 
+          required 
+        /> 
+        <TextInput 
+          label="Email" 
+          type="text" 
+          fieldName="email" 
+          placeholderText="name@domain.com" 
+          handleChange={handleChange} 
+          value={formData.email} 
+          required 
+        />
+        <TextInput 
+          label="Contact No" 
+          type="text" 
+          fieldName="contactNo" 
+          placeholderText="Your contact number" 
+          handleChange={handleChange} 
+          value={formData.contactNo} 
+          required 
+        />
+        <TextArea 
+          label="Message" 
+          fieldName="message" 
+          placeholderText="Your message" 
+          handleChange={(e) => handleChange(e)} 
+          value={formData.message} 
+          required 
+        />
+        <SubmitButton 
+          value={submitLabel} 
+          handleSubmit={(e) => handleSubmit(e)}
+          disabled={isDisabled()}
+        />
+      </form>
+    </div>
   );
 }
 
