@@ -7,11 +7,26 @@ type TextAreaType = {
   required: boolean
 }
 
-const TextArea = ({handleChange, label, placeholderText, fieldName, value, required}:TextAreaType) => {
+const TextArea = ({
+  handleChange, 
+  label, 
+  placeholderText, 
+  fieldName, 
+  value, 
+  required
+}:TextAreaType) => {
   return (
     <div>
       <label htmlFor={fieldName}>{label}:</label>
-      <textarea name={fieldName} placeholder={placeholderText} onChange={(e) => handleChange(e)} value={value} required={required} />
+      <textarea 
+        name={fieldName} 
+        aria-label={fieldName}
+        aria-labelledby={fieldName}
+        placeholder={placeholderText} 
+        onChange={(e) => handleChange(e)} 
+        value={value} 
+        required={required}
+      />
     </div>
   );
 }
