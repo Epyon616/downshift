@@ -4,5 +4,22 @@
   "email": {
     "address": "lee@downshift.io",
     "subject": "Enquiry from Downshift.io website"
+  },
+  "aboutSection": {
+    "title": "The home of full stack developer ",
+    "description": "<p>My website is currently undergoing some exciting changes, but don't worry - it will be back online very soon!</p> \n<p>In the meantime if you would like to discuss a project with me drop me a message using the form below.</p>\n<p>Thanks for your patience and stay tuned for updates!</p>"
+  },
+  "contactForm": {
+    "title": "Lets Chat!",
+    "tagline": "If you'd like to have a chat about a project want help with, drop me an email.",
+    "disabledButtonLabel": "Please fill in all fields...",
+    "enabledButtonLabel": "Send",
+    "thankyouMessage": "Thank you! I'll be in touch soon!",
+    "labels": {
+      "nameLabel": "Name",
+      "emailLabel":  "Email",
+      "contactNumberLabel": "Contact No",
+      "messageLabel": "Message"
+    }
   }
 }

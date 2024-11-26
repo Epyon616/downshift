@@ -6,6 +6,23 @@ export type SiteConfig = {
   email: {
     address: string,
     subject: string
+  },
+  aboutSection: {
+    title: string,
+    description: string
+  }
+  contactForm: {
+    title: string,
+    tagline: string,
+    disabledButtonLabel: string,
+    enabledButtonLabel: string,
+    thankyouMessage: string,
+    labels: {
+      nameLabel: string,
+      emailLabel:  string,
+      contactNumberLabel: string,
+      messageLabel: string
+    }
   }
 }
 

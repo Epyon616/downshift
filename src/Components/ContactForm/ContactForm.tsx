@@ -8,7 +8,8 @@ import './ContactForm.scss';
 
 const ContactForm = () => {
   const { configs } = useContext(ConfigContext);
-
+  const { contactForm , email, name } = configs;
+  const { labels, enabledButtonLabel, disabledButtonLabel, thankyouMessage }  = contactForm;
   const defaultData = {
     name: '',
     email: '',
@@ -25,14 +26,15 @@ const ContactForm = () => {
   }
 
   const messageVars = {
-    to_name: configs.name,
+    to_name: name,
     from_name: formData.name,
     reply_to: formData.email,
+    subject: email.subject,
     message: `${formData.message}\n\n contact details:\n phone: ${formData.contactNo}\n email: ${formData.email}`
   }
 
   const isDisabled = () => Object.entries(formData).filter(([,v])=> v === '').length > 0;
-  const submitLabel = isDisabled() ? 'Please fill in all fields...' : 'Send';
+  const submitLabel = isDisabled() ? disabledButtonLabel : enabledButtonLabel;
 
   const handleSubmit = async (e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
     e.preventDefault();
@@ -57,11 +59,11 @@ const ContactForm = () => {
   return (
     <div className="contact-form">
       <div className={'notification' + (showNotification ? ' show' : '')}>
-        Thank you! I'll be in touch soon!
+        {thankyouMessage}
       </div>
       <form  method="POST">
         <TextInput 
-          label="Name" 
+          label={labels.nameLabel} 
           type="text" 
           fieldName="name" 
           placeholderText="your name" 
@@ -70,7 +72,7 @@ const ContactForm = () => {
           required 
         /> 
         <TextInput 
-          label="Email" 
+          label={labels.emailLabel} 
           type="email" 
           fieldName="email" 
           placeholderText="name@domain.com" 
@@ -79,7 +81,7 @@ const ContactForm = () => {
           required 
         />
         <TextInput 
-          label="Contact No" 
+          label={labels.contactNumberLabel} 
           type="tel" 
           fieldName="contactNo" 
           placeholderText="Your contact number" 
@@ -88,7 +90,7 @@ const ContactForm = () => {
           required 
         />
         <TextArea 
-          label="Message" 
+          label={labels.messageLabel} 
           fieldName="message" 
           placeholderText="Your message" 
           handleChange={(e) => handleChange(e)} 

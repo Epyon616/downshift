@@ -8,6 +8,23 @@ const contextDefaultValues: ConfigContextState = {
     email: {
       address: '',
       subject: ''
+    },
+    aboutSection: {
+      title: '',
+      description: ''
+    },
+    contactForm: {
+      title: '',
+      tagline: '',
+      disabledButtonLabel: '',
+      enabledButtonLabel: '',
+      thankyouMessage: '',
+      labels: {
+        nameLabel: '',
+        emailLabel:  '',
+        contactNumberLabel: '',
+        messageLabel: ''
+      }
     }
   }
 };
