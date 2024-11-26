@@ -3,8 +3,11 @@
 @import './Sass/Layout/Layout';
 @import './Sass/Typography/Typography';
 
+body {
+  background-color: $black;
+}
 .content-section {
   width: 100vw;
-  padding: 50px 0;
+  padding: 150px 0;
   background-color: $black;
 }
