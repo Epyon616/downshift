@@ -1,7 +1,7 @@
-@import './Sass/Reset';
-@import './Sass/Abstracts/Variables';
-@import './Sass/Layout/Layout';
-@import './Sass/Typography/Typography';
+@use './Sass/Reset' as *;
+@use './Sass/Abstracts/Variables' as *;
+@use './Sass/Layout/Layout' as *;
+@use './Sass/Typography/Typography' as *;
 
 body {
   background-color: $black;

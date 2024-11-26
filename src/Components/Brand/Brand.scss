@@ -1,4 +1,4 @@
-@import '../../Sass/Abstracts/Variables';
+@use '../../Sass/Abstracts/Variables' as *;
 
 .branding {
   font-size: 4rem;

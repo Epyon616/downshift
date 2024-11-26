@@ -1,7 +1,9 @@
+@use '../Abstracts/Variables'  as *;
+
 /* Typography */
 body {
   font-family: $lora;
-  font-size: 18px;
+  font-size: 22px;
   color: $white;
 }
 

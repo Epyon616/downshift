@@ -1,4 +1,4 @@
-@import '../../Sass/Abstracts/Variables';
+@use '../../Sass/Abstracts/Variables' as *;
 
 .contact-form {
   width: 50vw;

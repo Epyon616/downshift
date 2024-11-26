@@ -1,10 +1,11 @@
 import { useContext } from 'react';
 import { ConfigContext } from '../../Components/Contexts';
+import './About.scss';
 
 const AboutSection = () => {
   const { configs } = useContext(ConfigContext);
   return (
-    <div>
+    <div className="about-content">
       <h2>The home of full stack developer <em>{configs.name}</em></h2>
       <p>My website is currently undergoing some exciting changes, but don't worry - it will be back online very soon!</p> 
       <p>Thanks for your patience and stay tuned for updates!</p>
