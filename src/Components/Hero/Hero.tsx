@@ -1,5 +1,5 @@
 import Branding from '../Brand';
-import AboutSection from '../About';
+import AboutSection from '../../Sections/About';
 import './Hero.scss'
 
 const HeroImage = () => {
