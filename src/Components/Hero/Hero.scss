@@ -3,6 +3,7 @@
   height: 100vh;
   background-image: url('../../assets/cover-image.jpg');
   background-size: cover;
+  background-attachment: fixed;
 
   .overlay {
     position: absolute;

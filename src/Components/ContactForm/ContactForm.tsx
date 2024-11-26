@@ -31,7 +31,7 @@ const ContactForm = () => {
     message: `${formData.message}\n\n contact details:\n phone: ${formData.contactNo}\n email: ${formData.email}`
   }
 
-  const isDisabled = () => Object.entries(formData).filter(([k,v])=> v === '').length > 0;
+  const isDisabled = () => Object.entries(formData).filter(([,v])=> v === '').length > 0;
   const submitLabel = isDisabled() ? 'Please fill in all fields...' : 'Send';
 
   const handleSubmit = async (e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
@@ -71,7 +71,7 @@ const ContactForm = () => {
         /> 
         <TextInput 
           label="Email" 
-          type="text" 
+          type="email" 
           fieldName="email" 
           placeholderText="name@domain.com" 
           handleChange={handleChange} 
@@ -80,7 +80,7 @@ const ContactForm = () => {
         />
         <TextInput 
           label="Contact No" 
-          type="text" 
+          type="tel" 
           fieldName="contactNo" 
           placeholderText="Your contact number" 
           handleChange={handleChange} 
