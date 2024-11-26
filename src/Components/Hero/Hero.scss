@@ -18,13 +18,9 @@
   .hero-text {
     display: block;
     margin: 200px auto 0 auto;
-  }
-  
-  @media screen and (max-width: 1024px) {
-    height: 80vh;
 
-    .overlay {
-      height: 80vh;
+    @media screen and (max-width: 1024px) {
+      margin-top: 600px;
     }
   }
 }
