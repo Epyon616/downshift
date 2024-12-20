@@ -1,6 +1,6 @@
 import HeroImage from './Components/Hero';
 import ContactSection from './Sections';
-// import Footer from './Components/Footer';
+import Footer from './Components/Footer';
 
 import './App.scss'
 
@@ -10,6 +10,7 @@ const App = () => {
     <>
       <HeroImage />
       <ContactSection /> 
+      <Footer />
     </>
   )
 }
