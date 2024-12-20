@@ -23,7 +23,13 @@
     }
   },
   "links": {
-    "github": "https://github.com/epyon616",
-    "linkedin": "https://linkedin.com/in/leerichmond81"
+    "github":  {
+      "link": "https://github.com/epyon616",
+      "label": "Github profile of Lee Richmond"
+    },
+    "linkedin": {
+      "link": "https://linkedin.com/in/leerichmond81",
+      "label": "Linked In profile of Lee Richmond"
+    }
   }
 }

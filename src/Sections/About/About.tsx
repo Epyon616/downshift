@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import { ConfigContext } from '../../Components/Contexts';
+import { IconLink } from '../../Components/Links';
 import GithubIcon from '../../assets/github.svg';
 import LinkedInIcon from '../../assets/linkedin.svg';
 import './About.scss';
@@ -15,8 +16,8 @@ const AboutSection = () => {
       <h4 className="subtitle">{aboutSection.title} <em>{name}</em></h4>
       {ReactHtmlParser(aboutSection.description)}
       <div>
-        <a href={github} target="_blank"><img src={GithubIcon} className="icon" /></a>
-        <a href={linkedin} target="_blank"><img src={LinkedInIcon} className="icon" /></a>
+        <IconLink href={github.link} label={github.label} icon={GithubIcon} />
+        <IconLink href={linkedin.link} label={linkedin.label} icon={LinkedInIcon} />
       </div>
     </div>
   );

@@ -1,5 +1,11 @@
 import { ReactElement } from 'react';
 
+
+type LinkItem = {
+  link: string,
+  label: string
+}
+
 export type SiteConfig = {
   name: string,
   domain: string,
@@ -25,8 +31,7 @@ export type SiteConfig = {
     }
   },
   links: {
-    github: string,
-    linkedin: string
+    [key: string]: LinkItem
   }
 }
 

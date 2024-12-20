@@ -27,8 +27,14 @@ const contextDefaultValues: ConfigContextState = {
       }
     },
     links: {
-      github: '',
-      linkedin: ''
+      github: {
+        label: '',
+        link: ''
+      },
+      linkedin: {
+        label: '',
+        link: ''
+      }
     }
   }
 };

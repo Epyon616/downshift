@@ -15,8 +15,14 @@ describe('<AboutSection />', () => {
           description: ''
         },
         links: {
-          github: '',
-          linkedin: ''
+          github: {
+            link: '',
+            label: ''
+          },
+          linkedin: {
+            link: '',
+            label: ''
+          }
         } 
       } 
     }));
