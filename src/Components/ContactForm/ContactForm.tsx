@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser'
 import { ContactFormState } from './types';
 import { ConfigContext } from '../Contexts';
 import { TextInput, TextArea, SubmitButton } from '../FormElements';
+import Notification from '../Notification';
 
 import './ContactForm.scss';
 
@@ -46,7 +47,6 @@ const ContactForm = () => {
       import.meta.env.VITE_PUBLIC_KEY
     ).then(
       () => {
-        console.log('SUCCESS!');
         setShowNotification(!showNotification);
         setFormData(defaultData);
       },
@@ -58,9 +58,7 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form">
-      <div className={'notification' + (showNotification ? ' show' : '')}>
-        {thankyouMessage}
-      </div>
+      <Notification showNotification={showNotification} message={thankyouMessage} />
       <form  method="POST">
         <TextInput 
           label={labels.nameLabel} 
