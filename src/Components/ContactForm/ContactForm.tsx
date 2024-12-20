@@ -64,7 +64,7 @@ const ContactForm = () => {
       <form  method="POST">
         <TextInput 
           label={labels.nameLabel} 
-          type="text" 
+          type="name" 
           fieldName="name" 
           placeholderText="your name" 
           handleChange={handleChange} 
