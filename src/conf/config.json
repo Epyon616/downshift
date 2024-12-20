@@ -21,5 +21,9 @@
       "contactNumberLabel": "Contact No",
       "messageLabel": "Message"
     }
+  },
+  "links": {
+    "github": "https://github.com/epyon616",
+    "linkedin": "https://linkedin.com/in/leerichmond81"
   }
 }

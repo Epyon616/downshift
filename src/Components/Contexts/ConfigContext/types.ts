@@ -10,7 +10,7 @@ export type SiteConfig = {
   aboutSection: {
     title: string,
     description: string
-  }
+  },
   contactForm: {
     title: string,
     tagline: string,
@@ -23,6 +23,10 @@ export type SiteConfig = {
       contactNumberLabel: string,
       messageLabel: string
     }
+  },
+  links: {
+    github: string,
+    linkedin: string
   }
 }
 

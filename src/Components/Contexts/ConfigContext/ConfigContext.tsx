@@ -25,6 +25,10 @@ const contextDefaultValues: ConfigContextState = {
         contactNumberLabel: '',
         messageLabel: ''
       }
+    },
+    links: {
+      github: '',
+      linkedin: ''
     }
   }
 };
