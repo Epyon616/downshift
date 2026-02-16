@@ -9,10 +9,6 @@ const contextDefaultValues: ConfigContextState = {
       address: '',
       subject: ''
     },
-    aboutSection: {
-      title: '',
-      description: ''
-    },
     contactForm: {
       title: '',
       tagline: '',
