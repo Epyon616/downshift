@@ -14,5 +14,9 @@
     line-height: $line-height-heading;
     margin: 100px auto;
     text-align: center;
+
+    @media screen and (max-width: 1024px) {
+      width: 85vw;
+    }
   }
 }

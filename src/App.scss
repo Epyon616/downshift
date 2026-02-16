@@ -29,6 +29,10 @@ body {
     margin: 0 auto;
     padding: 10px 45px;
     background-color: $color-bg-primary-faded;
+
+    @media screen and (max-width: 1024px) {
+      width: 85vw;
+    }
   }
 }
 
