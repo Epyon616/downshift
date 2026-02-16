@@ -13,10 +13,6 @@ export type SiteConfig = {
     address: string,
     subject: string
   },
-  aboutSection: {
-    title: string,
-    description: string
-  },
   contactForm: {
     title: string,
     tagline: string,
