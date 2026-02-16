@@ -1,7 +1,7 @@
 import ContactSection from './Sections';
 import './App.scss'
 import AboutSection from './Components/About';
-import { Header, Footer, HeroImage } from './Components';
+import { Header, Footer, HeroImage, ClientList } from './Components';
 
 const App = () => (
   <>
@@ -9,6 +9,7 @@ const App = () => (
     <HeroImage />
     <section className='content'>
       <AboutSection />
+      <ClientList />
       <ContactSection /> 
     </section>
     <Footer />

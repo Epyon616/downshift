@@ -59,7 +59,7 @@ const ContactForm = () => {
   return (
     <div className="contact-form">
       <Notification showNotification={showNotification} message={thankyouMessage} />
-      <form  method="POST">
+      <form method="POST">
         <TextInput 
           label={labels.nameLabel} 
           type="name" 

@@ -16,7 +16,7 @@ const TextArea = ({
   required
 }:TextAreaType) => (
   <>
-    <label htmlFor={fieldName}>{label}:</label>
+    <label htmlFor={fieldName}>{label}</label>
     <textarea 
       name={fieldName} 
       aria-label={fieldName}
