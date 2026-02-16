@@ -3,11 +3,11 @@ import './about.scss';
 
 const AboutSection = () => (
   <section className="about">
+    <h2>
+      I’m Lee Richmond, a full-stack developer based in Redditch, Worcestershire, UK.
+    </h2>
     <div className="about-bio">
       <div>
-        <h2>
-          I’m Lee Richmond, a full-stack developer based in Redditch, Worcestershire, UK.
-        </h2>
         <p>
           My journey into development started in 1999 when I built my first HTML website
           for a band I was playing in. What began as curiosity quickly evolved into a
