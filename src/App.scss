@@ -4,15 +4,36 @@
 @use './Sass/Typography/Typography' as *;
 
 body {
-  background-color: $black;
+  background-image: url('./assets/cover-image.png');
+  background-size: cover;
+  background-attachment: fixed;
+  color: $color-text-primary;
+  font-size: 18px;
 
   p {
     line-height: 155%;
     margin-bottom: 25px;
   }
+
+  a {
+    color: $color-accent-primary;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .content {
+    width: 60vw;
+    margin: 0 auto;
+    padding: 10px 45px;
+    background-color: $color-bg-primary-faded;
+  }
 }
+
 .content-section {
   width: 100vw;
   padding: 150px 0;
-  background-color: $black;
+  background-color: $color-bg-primary;
 }

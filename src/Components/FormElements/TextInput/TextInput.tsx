@@ -17,23 +17,22 @@ const TextInput = ({
   fieldName, 
   placeholderText, 
   required 
-}:TextInputType) => {
-  return (
-    <div>
-      <label htmlFor={fieldName}>{label}</label>
-      <input 
-        id={fieldName} 
-        type={type} 
-        name={fieldName} 
-        aria-label={label}
-        aria-labelledby={label} 
-        placeholder={placeholderText} 
-        onChange={handleChange} 
-        value={value} 
-        required={required} 
-      />
-    </div>
-  );
-}
+}:TextInputType) => (
+  <>
+    <label htmlFor={fieldName}>{label}</label>
+    <input 
+      id={fieldName} 
+      type={type} 
+      name={fieldName} 
+      aria-label={label}
+      aria-labelledby={label} 
+      placeholder={placeholderText} 
+      onChange={handleChange} 
+      value={value} 
+      required={required} 
+    />
+  </>
+);
+
 
 export default TextInput;

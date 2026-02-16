@@ -1,12 +1,9 @@
 @use '../../Sass/Abstracts/Variables' as *;
 
 .contact-form {
-  width: 50vw;
+  text-align: left;
+  width: 100%;
   margin: 0 auto;
-
-  @media screen and (max-width: 1024px) {
-    width: 90vw;
-  }
 
   .notification {
     display: none;
@@ -14,86 +11,72 @@
     &.show {
       width: 100%;
       height: 30px;
-      background: $light-purple;
-      color: $white;
       margin-bottom: 20px;
       padding: 20px 0;
       border-radius: 5px;
       text-align: center;
-      font-family: $helvetica;
       font-size: 1.4rem;
-      font-weight: $strongest;
       display: block;
     }
   }
- 
-  div {
+
+  form {
     display: grid;
-    grid-template-columns: 20% 80%;
-    row-gap: 20px;
-    height: auto;
-
-    @media only screen and (max-width: 500px) {
-      display: block;
-    }
-  }
-
-  label, input, button {
-    font-size: 1.4rem;
-    height: 50px;
-
-    @media only screen and (max-width: 500px) {
-      display: block;
-      width: 90%;
-      // margin-bottom: 5px;
-    }
-  }
-
-  label {
-    font-weight: $strongest;
-    margin-right: 20px;
-    padding-top: 10px;
-    text-align: left;
-
-    @media only screen and (max-width: 500px) {
-      height: 40px;
-    }
-  }
-
-  input, textarea {
-    padding: 0 15px;
-    border: 1px solid $light-purple;
-    border-radius: 5px;
-    background: $dark-purple;
-    color: $white;
-    
-    &::placeholder {
-      color: $lightest-purple;
-    }
-  }
-
-  textarea {
-    font-size: 1.4rem;
-    height: 300px;
-    padding: 15px;
-    font-family: $helvetica;
-
-    @media only screen and (max-width: 500px) {
-      display: block;
-      width: 90%;
-      margin-bottom: 15px;
-    }
-  }
-
-  input[type="submit"] {
-    background-color: $light-purple;
-    color: $white;
+    grid-template-columns: 1fr;
     width: 100%;
-    margin-top: 20px;
 
-    &:disabled {
-      background-color: $lightest-purple;
-      color: $light-purple;
+    input, 
+    label, 
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    label {
+      margin: 15px 0 10px 0;
+      font-weight: 700;
+      font-size: $font-size-body-lg;
+    }
+
+    input {
+      height: 55px;
+
+      &[type="submit"] {
+        margin: 10px auto;
+        background-color: $color-accent-primary;
+        color: $color-text-primary;
+        font-size: $font-size-body-lg;
+        cursor: pointer;
+        &:disabled {
+          background-color: $color-bg-elevated;
+          color: $color-text-primary;
+          border: 0;
+          cursor: not-allowed;
+        }
+      }
+
+      &::placeholder {
+        text-indent: 15px;
+        font-size: $font-size-body-lg;
+        font-family: $font-mono;
+      }
+    }
+
+    input, 
+    textarea {
+      border-radius: 5px;
+      border: 2px solid $color-text-primary;
+    }
+
+    textarea {
+      height: 150px;
+      padding: 15px 0;
+      
+      &::placeholder {
+        text-indent: 15px;
+        font-family: $font-mono;
+        font-size: $font-size-body-lg;
+      }
     }
   }
 }

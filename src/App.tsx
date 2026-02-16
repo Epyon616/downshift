@@ -1,18 +1,18 @@
-import HeroImage from './Components/Hero';
 import ContactSection from './Sections';
-import Footer from './Components/Footer';
-
 import './App.scss'
+import AboutSection from './Components/About';
+import { Header, Footer, HeroImage } from './Components';
 
-const App = () => {
-
-  return (
-    <>
-      <HeroImage />
+const App = () => (
+  <>
+    <Header />
+    <HeroImage />
+    <section className='content'>
+      <AboutSection />
       <ContactSection /> 
-      <Footer />
-    </>
-  )
-}
+    </section>
+    <Footer />
+  </>
+);
 
 export default App

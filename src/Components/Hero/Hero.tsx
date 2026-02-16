@@ -1,5 +1,3 @@
-import Branding from '../Brand';
-import AboutSection from '../../Sections/About';
 import './Hero.scss'
 
 const HeroImage = () => {
@@ -7,8 +5,7 @@ const HeroImage = () => {
     <div className="hero-image">
       <div className="overlay">
         <div className="hero-text">
-          <Branding size="xl" />
-          <AboutSection />
+          <span className="logo"></span><strong>down</strong>shift
         </div>
       </div>
     </div>

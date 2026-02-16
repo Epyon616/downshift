@@ -1,52 +1,56 @@
 @use '../Abstracts/Variables' as *;
 
-/* Typography */
 body {
-  font-family: $helvetica;
-  font-size: 18px;
-  color: $white;
+  font-family: $font-sans;
+  font-size: $font-size-body;
 }
 
-strong {
-  font-weight: $strongest;
-}
-
-h1, h2, h3, h4 {
-  font-family: $rubik;
-  font-weight: $strongest;
-  text-transform: uppercase;
-}
-
-.subtitle {
-  font-size: 2rem;
+code, pre {
+  font-family: $font-mono;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: $font-size-h1;
+  line-height: $line-height-tight;
+  font-weight: 900;
 }
- 
+
 h2 {
-  font-size: 3rem;
+  font-size: $font-size-h2;
+  line-height: $line-height-heading;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 2.5rem;
-
+  font-size: $font-size-h3;
+  line-height: 1.3;
+  font-weight: 600;
 }
 
 h4 {
-  font-size: 2rem;
+  font-size: $font-size-h4;
+  line-height: 1.4;
+  font-weight: 500;
 }
 
-a {
-  color: $yellow;
-  font-weight: $strong;
+p {
+  line-height: $line-height-body;
+}
+
+strong {
+  font-weight: 900;
 }
 
 em {
   font-style: italic;
 }
 
-.code-text {
-  font-family: $lora;
+.lead {
+  font-size: $font-size-body-lg;
 }
+
+.small {
+  font-size: $font-size-small;
+}
+
+

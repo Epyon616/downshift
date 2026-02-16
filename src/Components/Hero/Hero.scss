@@ -1,30 +1,24 @@
 .hero-image {
   width: 100vw;
   height: 100vh;
-  background-image: url('../../assets/cover-image.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image:
-    linear-gradient(to bottom, rgba(73, 1, 60, 0.3), rgba(0, 0, 0, 0.8));
-  }
 
   .hero-text {
     display: block;
-    margin: 100px auto 0 auto;
+    margin: 22% auto 0 auto;
+    font-size: 12rem;
+    letter-spacing: 0;
+    font-weight: 100;
 
-    @media only screen and (min-width: 900px) and (max-width: 1024px) {
-      margin-top: 300px;
+    .logo {
+      display: inline-block;
+      background-image: url("../../assets/ds-chevron.svg");
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
     }
 
-    @media only screen and (min-width: 375px) and (max-width: 414px) {
-      margin-top: 5s0px;
+    strong {
+      font-weight: 900;
     }
   }
 }

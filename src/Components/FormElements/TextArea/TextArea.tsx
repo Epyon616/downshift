@@ -14,21 +14,19 @@ const TextArea = ({
   fieldName, 
   value, 
   required
-}:TextAreaType) => {
-  return (
-    <div>
-      <label htmlFor={fieldName}>{label}:</label>
-      <textarea 
-        name={fieldName} 
-        aria-label={fieldName}
-        aria-labelledby={fieldName}
-        placeholder={placeholderText} 
-        onChange={(e) => handleChange(e)} 
-        value={value} 
-        required={required}
-      />
-    </div>
-  );
-}
+}:TextAreaType) => (
+  <>
+    <label htmlFor={fieldName}>{label}:</label>
+    <textarea 
+      name={fieldName} 
+      aria-label={fieldName}
+      aria-labelledby={fieldName}
+      placeholder={placeholderText} 
+      onChange={(e) => handleChange(e)} 
+      value={value} 
+      required={required}
+    />
+  </>
+);
 
 export default TextArea;

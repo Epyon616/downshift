@@ -4,13 +4,10 @@ type SubmitButtonType = {
   disabled: boolean
 }
 
-const SubmitButton = ({value, handleSubmit, disabled}: SubmitButtonType) => {
-  return (
-  <div>
-    <div/>
+const SubmitButton = ({value, handleSubmit, disabled}: SubmitButtonType) => (
+  <>
     <input type="submit" value={value} onClick={(e) => handleSubmit(e)} disabled={disabled} />
-  </div>
-  ); 
-}
+  </>
+); 
 
 export default SubmitButton;
