@@ -9,6 +9,11 @@
     grid-template-columns: 70% 30%;
     column-gap: 30px;
 
+    height: fit-content;
+    div {
+      height: auto;
+    }
+
     img {
       width: 90%;
       border-radius: 16px;
@@ -16,7 +21,6 @@
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
       column-gap: 0px;
       img {
         width: 100%;
@@ -36,7 +40,12 @@
     text-align: center;
 
     @media screen and (max-width: 1024px) {
-      width: 85vw;
+      width: 80vw;
+      margin: 30px auto;
     }
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin: 30px auto;
   }
 }

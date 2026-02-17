@@ -34,7 +34,8 @@ body {
     background-color: $color-bg-primary;
 
     @media screen and (max-width: 1024px) {
-      width: 85vw;
+      width: 93vw;
+      padding: 10px 30px;
     }
   }
 }
