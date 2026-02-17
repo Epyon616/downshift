@@ -9,6 +9,7 @@ body {
   background-attachment: fixed;
   color: $color-text-primary;
   font-size: 18px;
+  text-shadow: 1px 1px 3px black;
 
   p {
     line-height: 155%;
@@ -27,8 +28,10 @@ body {
   .content {
     width: 60vw;
     margin: 0 auto;
+    margin-bottom: 50px;
     padding: 10px 45px;
-    background-color: $color-bg-primary-faded;
+    border-radius: 16px;
+    background-color: $color-bg-primary;
 
     @media screen and (max-width: 1024px) {
       width: 85vw;

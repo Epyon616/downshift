@@ -7,12 +7,12 @@ const App = () => (
   <>
     <Header />
     <HeroImage />
-    <section className='content'>
+    <main className='content'>
       <AboutSection />
       <ClientList />
       <ContactSection /> 
-    </section>
-    <Footer />
+      <Footer />
+    </main>
   </>
 );
 
