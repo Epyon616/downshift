@@ -1,7 +1,7 @@
 import ContactSection from './Sections';
 import './App.scss'
 import AboutSection from './Components/About';
-import { Header, Footer, HeroImage, ClientList } from './Components';
+import { Header, Footer, HeroImage, ClientList, SocialLinks } from './Components';
 
 const App = () => (
   <>
@@ -9,6 +9,7 @@ const App = () => (
     <HeroImage />
     <main className='content'>
       <AboutSection />
+      <SocialLinks />
       <ClientList />
       <ContactSection /> 
       <Footer />
