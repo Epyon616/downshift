@@ -18,30 +18,19 @@
   .hero-text {
     display: block;
     margin: 22% auto 0 auto;
-    font-size: 12rem;
+    font-size: 10vw;
     letter-spacing: 0;
     font-weight: 100;
 
     @media screen and (max-width: 1024px) {
       margin-top: 50%;
-      font-size: 10rem;
-    }
-
-    @media screen and (max-width: 500px) {
-      font-size: 4rem;
     }
 
     .logo {
-      display: inline-block;
-      background-image: url("../../assets/ds-chevron.svg");
-      background-repeat: no-repeat;
-      width: 200px;
-      height: 200px;
-
-      @media screen and (max-width: 500px) {
-        width: 80px;
-        height: 80px;
-      }
+      max-width: 10vw;
+      width: 100%;
+      height: auto;
+      margin-right: 10px;
     }
 
     strong {
