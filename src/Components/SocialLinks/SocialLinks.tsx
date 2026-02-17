@@ -5,7 +5,6 @@ import GithubIcon from '../../assets/github.svg';
 import LinkedInIcon from '../../assets/linkedin.svg';
 import './SocialLinks.scss';
 
-
 const SocialLinks = () => {
   const { configs } = useContext(ConfigContext);
   const  { links } = configs;
