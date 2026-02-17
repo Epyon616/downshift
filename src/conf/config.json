@@ -6,8 +6,8 @@
     "subject": "Enquiry from Downshift.io website"
   },
   "contactForm": {
-    "title": "Lets Chat!",
-    "tagline": "If you'd like to have a chat about a project want help with, drop me an email.",
+    "title": "Start the Conversation",
+    "tagline": "If you’re exploring a new project or need an experienced pair of hands, drop me an email and let’s discuss how I can help.",
     "disabledButtonLabel": "Please fill in all fields...",
     "enabledButtonLabel": "Send",
     "thankyouMessage": "Thank you! I'll be in touch soon!",
