@@ -7,7 +7,7 @@ const HeroImage = () => {
         <div className="hero-text">
           <span className="logo"></span><strong>down</strong>shift
         </div>
-        <span className="scroll blink-smooth">Scroll</span>
+        <span className="scroll blink-smooth">Scroll <br /> &#x25BC;</span>
       </div>
     </div>
   );

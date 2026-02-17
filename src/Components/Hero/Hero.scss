@@ -8,6 +8,7 @@
     position: absolute;
     bottom: 50px;
     font-size: $font-size-body-lg;
+    line-height: $line-height-body;
 
     &.blink-smooth {
       animation: blink_smooth 2s infinite;
