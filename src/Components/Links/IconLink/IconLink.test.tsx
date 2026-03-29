@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import IconLink from './IconLink';
-import GithubIcon from '../../../assets/github.svg';
+import GithubIcon from '../../../Assets/github.svg';
 
 describe('IconLink', () => {
   const linkRef = 'https://example.com';

@@ -1,4 +1,4 @@
-import downshiftLogo from '../../assets/ds-chevron.svg';
+import downshiftLogo from '../../Assets/ds-chevron.svg';
 import './Logo.scss';
 
 const Logo = () => (

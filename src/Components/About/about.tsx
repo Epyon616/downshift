@@ -1,4 +1,4 @@
-import leeRichmondImage from '../../assets/lee_richmond.jpg';
+import leeRichmondImage from '../../Assets/lee_richmond.jpg';
 import './about.scss';
 
 const AboutSection = () => (

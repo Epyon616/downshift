@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { ConfigContext } from '../Contexts';
 import { IconLink } from '../Links';
-import GithubIcon from '../../assets/github.svg';
-import LinkedInIcon from '../../assets/linkedin.svg';
+import GithubIcon from '../../Assets/github.svg';
+import LinkedInIcon from '../../Assets/linkedin.svg';
 import './SocialLinks.scss';
 
 const SocialLinks = () => {
