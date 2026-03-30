@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { useContext } from 'react';
 import ConfigContext from './ConfigContext';
 import ConfigsProvider from './ConfigContextProvider';
-import configData from '../../../conf/config.json';
+import configData from '../../../Conf/config.json';
 
 const TestComponent = () => {
   const { configs } = useContext(ConfigContext);
