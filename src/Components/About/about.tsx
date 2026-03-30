@@ -30,7 +30,7 @@ const AboutSection = () => (
 
     <p className="cta">
       <strong>
-        If you’re looking for a developer who values clean code, clear communication, and long-term thinking, <a href="/contact">let’s talk</a>. I’d love to help bring your next idea to life.
+        If you’re looking for a developer who values clean code, clear communication, and long-term thinking, <a href="#contact-me">let’s talk</a>. I’d love to help bring your next idea to life.
       </strong>
     </p>
   </section>

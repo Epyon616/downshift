@@ -1,6 +1,6 @@
 import eeLogo from '../../Assets/client-logos/ee-logo.png';
 import signStixLogo from '../../Assets/client-logos/signstix-logo.png';
-import collectPlusLogo from '../..//client-logos/collect-plus.jpg';
+import collectPlusLogo from '../../Assets/client-logos/collect-plus.jpg';
 import unboxedLogo from '../../Assets/client-logos/unboxed-logo.png';
 import onTheBeachLogo from '../../Assets/client-logos/on-the-beach.png';
 import visfoLogo from '../../Assets/client-logos/visfo-health.png';

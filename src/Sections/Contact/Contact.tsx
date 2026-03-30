@@ -8,7 +8,7 @@ const ContactSection = () => {
   const { configs: { contactForm } } = useContext(ConfigContext);
   return (
     <>
-      <div className="contact-section-intro">
+      <div className="contact-section-intro" id="contact-me">
         <h3>{contactForm.title}</h3>
         <p>{contactForm.tagline}</p>
       </div>
