@@ -1,6 +1,6 @@
 module.exports = {
     collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/index.ts'],
-    moduleNameMapper: {'^.+\\.s?css$': 'identity-obj-proxy', "^.+\\.svg$": "jest-svg-transformer"},
+    moduleNameMapper: {'^.+\\.s?css$': 'identity-obj-proxy', "^.+\\.svg$": "jest-svg-transformer", "^.+\\.(png|jpg|jpeg|gif|webp)$": "<rootDir>/__mocks__/fileMock.js"},
     transform: {'^.+\\.tsx?$': 'babel-jest'},
     testRegex: '/.*\\.test\\.tsx?$',
     setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
