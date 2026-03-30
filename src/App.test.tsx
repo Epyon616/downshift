@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
 import ConfigsProvider from './Components/Contexts/ConfigContext/ConfigContextProvider';
 import configData from './Conf/config.json';
