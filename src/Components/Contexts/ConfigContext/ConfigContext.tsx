@@ -31,6 +31,9 @@ const contextDefaultValues: ConfigContextState = {
         label: '',
         link: ''
       }
+    },
+    work: {
+      selectedWork: []
     }
   }
 };

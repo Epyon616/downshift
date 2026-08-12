@@ -9,7 +9,8 @@ describe('Footer', () => {
 
   it('renders copyright text', () => {
     render(<Footer />);
-    expect(screen.getByText(/Copyright/i)).toBeInTheDocument();
-    expect(screen.getByText(/Down Shift/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(`© ${new Date().getFullYear()} Downshift`)
+    ).toBeInTheDocument();
   });
 });

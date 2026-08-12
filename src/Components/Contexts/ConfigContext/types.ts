@@ -29,6 +29,9 @@ export type SiteConfig = {
   links: {
     [key: string]: LinkItem
   }
+  work: {
+    selectedWork: SelectedWorkProps[]
+  }
 }
 
 export type ConfigObject = {
@@ -43,4 +46,13 @@ export type ConfigContextState = {
 export type ProviderPorps = {
   configJson: SiteConfig,
   children: ReactElement
+}
+
+export interface SelectedWorkProps   {
+  title: string;
+  category: string;
+  subtitle: string;
+  description: string;
+  technologies: string[];
+  href: string;
 }

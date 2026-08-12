@@ -1,38 +1,12 @@
 import { Link } from 'react-router-dom';
-
 import './SelectedWork.scss';
-
-const projects = [
-  {
-    title: 'Healthinote',
-    category: 'Healthcare · SaaS',
-    subtitle: 'Personalised healthcare information platform',
-    description:
-      'Senior engineering across a production healthcare application, including React and TypeScript development, API integrations, architecture and technical leadership.',
-    technologies: ['React', 'TypeScript', 'Node.js', 'APIs'],
-    href: '/work/healthinote',
-  },
-  {
-    title: 'Asset Service',
-    category: 'Platform · Modernisation',
-    subtitle: 'Production service consolidation',
-    description:
-      'Consolidating three established production services into a single service while preserving existing API contracts, database behaviour and consumer compatibility.',
-    technologies: ['Node.js', 'TypeScript', 'PostgreSQL', 'Knex', 'Docker'],
-    href: '/work/asset-service',
-  },
-  {
-    title: 'GuestFlow',
-    category: 'SaaS · Product',
-    subtitle: 'Restaurant booking platform',
-    description:
-      'Designing and building a restaurant booking SaaS from the ground up, covering product decisions, frontend architecture, data modelling and application security.',
-    technologies: ['React', 'TypeScript', 'PostgreSQL', 'Supabase', 'Vitest'],
-    href: '/work/guestflow',
-  },
-];
+import { useContext } from 'react';
+import { ConfigContext } from '../Contexts';
+import { SelectedWorkProps } from '../Contexts/ConfigContext/types';
 
 const SelectedWork = () => {
+  const { configs: { work: {  selectedWork } } } = useContext(ConfigContext);
+
   return (
     <section className="selected-work" aria-labelledby="selected-work-title">
       <div className="selected-work__inner">
@@ -46,7 +20,7 @@ const SelectedWork = () => {
         </div>
 
         <div className="selected-work__projects">
-          {projects.map((project) => (
+          {selectedWork.map((project: SelectedWorkProps) => (
             <article className="project-card" key={project.title}>
               <div className="project-card__header">
                 <h3>{project.title}</h3>
@@ -61,7 +35,7 @@ const SelectedWork = () => {
                 className="project-card__technologies"
                 aria-label={`${project.title} technologies`}
               >
-                {project.technologies.map((technology) => (
+                {project.technologies.map((technology : string) => (
                   <li key={technology}>{technology}</li>
                 ))}
               </ul>
