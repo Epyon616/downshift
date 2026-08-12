@@ -1,10 +1,10 @@
-@use './Sass/Reset' as *;
-@use './Sass/Abstracts/Variables' as *;
-@use './Sass/Layout/Layout' as *;
-@use './Sass/Typography/Typography' as *;
+@use '../Sass/Reset' as *;
+@use '../Sass/Abstracts/Variables' as *;
+@use '../Sass/Layout/Layout' as *;
+@use '../Sass/Typography/Typography' as *;
 
 body {
-  background-image: url('./Assets/cover-image.png');
+  background-image: url('../Assets/cover-image.png');
   background-size: cover;
   background-attachment: fixed;
   color: $color-text-primary;
@@ -26,12 +26,14 @@ body {
   }
 
   .content {
-    width: 60vw;
+    max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 50px;
     padding: 10px 45px;
     border-radius: 16px;
     background-color: $color-bg-primary;
+    box-sizing: border-box;
+    
 
     @media screen and (max-width: 1024px) {
       width: 93vw;

@@ -2,8 +2,8 @@
 
 .contact-form {
   text-align: left;
-  width: 100%;
-  margin: 0 auto;
+  width: min(100%, 850px);
+  margin: 3rem auto 0;
 
   .notification {
     display: none;
@@ -39,13 +39,16 @@
     }
 
     input {
-      height: 55px;
+      height: 45px;
+      padding: 1rem 2rem;
 
       &[type="submit"] {
         margin: 10px auto;
-        background-color: $color-accent-primary;
-        color: $color-text-primary;
+        height: 55px;
+        background: #ed174c;
+        border: none;
         font-size: $font-size-body-lg;
+        color: #FFF;
         cursor: pointer;
         
         &:disabled {
@@ -65,13 +68,14 @@
 
     input, 
     textarea {
+      font-size: 1rem;
       border-radius: 5px;
       border: 2px solid $color-text-primary;
     }
 
     textarea {
       height: 150px;
-      padding: 15px 0;
+      padding: 1rem 2rem;
       
       &::placeholder {
         text-indent: 15px;

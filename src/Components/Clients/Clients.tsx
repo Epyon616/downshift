@@ -7,15 +7,15 @@ import visfoLogo from '../../Assets/client-logos/visfo-health.png';
 import './Clients.scss';
 
 const ClientList = () => (
-  <>
+  <div className="clients">
     <h2>
       Who I've worked with
     </h2>
     <p>
-      I’ve spent the past two decades collaborating with ambitious teams and forward-thinking companies.
-      Let’s build something great together.
+      I've worked with teams across healthcare, technology, ecommerce and digital products, helping build, improve and modernise production software.
     </p>
-    <div className="clients">
+  
+    <div className="logos">
       <img src={visfoLogo} alt="Visfo Health" className="logo" />
       <img src={eeLogo} alt="EE" className="logo" />
       <img src={signStixLogo} alt="SignStix" className="logo" />
@@ -23,7 +23,8 @@ const ClientList = () => (
       <img src={unboxedLogo} alt="Unboxed" className="logo" />
       <img src={onTheBeachLogo} alt="On The Beach" className="logo" />
     </div>
-  </>
+  </div>
+
 );
 
 export default ClientList;

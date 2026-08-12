@@ -14,7 +14,6 @@ const ContactForm = () => {
   const defaultData = {
     name: '',
     email: '',
-    contactNo: '',
     message: ''
   };
 
@@ -64,7 +63,7 @@ const ContactForm = () => {
           label={labels.nameLabel} 
           type="name" 
           fieldName="name" 
-          placeholderText="your name" 
+          placeholderText="Your name" 
           handleChange={handleChange} 
           value={formData.name} 
           required 
@@ -78,19 +77,10 @@ const ContactForm = () => {
           value={formData.email} 
           required 
         />
-        <TextInput 
-          label={labels.contactNumberLabel} 
-          type="tel" 
-          fieldName="contactNo" 
-          placeholderText="Your contact number" 
-          handleChange={handleChange} 
-          value={formData.contactNo} 
-          required 
-        />
         <TextArea 
           label={labels.messageLabel} 
           fieldName="message" 
-          placeholderText="Your message" 
+          placeholderText="Tell me a little about the role or project..." 
           handleChange={(e) => handleChange(e)} 
           value={formData.message} 
           required 

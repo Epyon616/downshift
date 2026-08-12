@@ -6,6 +6,7 @@ import Footer from './Footer';
 import HeroImage from './Hero';
 import Header from './Header';
 import SocialLinks from './SocialLinks';
+import SelectedWork from './SelectedWork';
 
 export { 
   AboutSection, 
@@ -15,5 +16,6 @@ export {
   Footer, 
   HeroImage, 
   Header,
+  SelectedWork,
   SocialLinks
 };

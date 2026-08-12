@@ -6,10 +6,10 @@
     "subject": "Enquiry from Downshift.io website"
   },
   "contactForm": {
-    "title": "Start the Conversation",
-    "tagline": "If you’re exploring a new project or need an experienced pair of hands, drop me an email and let’s discuss how I can help.",
-    "disabledButtonLabel": "Please fill in all fields...",
-    "enabledButtonLabel": "Send",
+    "title": "Let's work together",
+    "tagline": "I'm always interested in hearing about senior engineering roles, contract opportunities and interesting products. If you think I'd be a good fit for your team, get in touch.",
+    "disabledButtonLabel": "Send message →",
+    "enabledButtonLabel": "Send message →",
     "thankyouMessage": "Thank you! I'll be in touch soon!",
     "labels": {
       "nameLabel": "Name",
@@ -27,5 +27,36 @@
       "link": "https://linkedin.com/in/leerichmond81",
       "label": "Linked In profile of Lee Richmond"
     }
+  },
+    "work": {
+    "selectedWork": [
+  {
+    "title": "Healthinote",
+    "category": "Healthcare · SaaS",
+    "subtitle": "Personalised healthcare information platform",
+    "description":
+      "Senior engineering across a production healthcare application, including React and TypeScript development, API integrations, architecture and technical leadership.",
+    "technologies": ["React", "TypeScript", "Node.js", "APIs"],
+    "href": "/work/healthinote"
+  },
+  {
+    "title": "Asset Service",
+    "category": "Modernisation",
+    "subtitle": "Production service consolidation",
+    "description":
+      "Consolidating three established production services into a single service while preserving API contracts, database behaviour and compatibility with existing consumers.",
+    "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Knex", "Docker"],
+    "href": "/work/asset-service"
+  },
+  {
+    "title": "GuestFlow",
+    "category": "SaaS · Product",
+    "subtitle": "Restaurant booking platform",
+    "description":
+      "Designing and building a restaurant booking SaaS from the ground up, covering product decisions, frontend architecture, data modelling and application security.",
+    "technologies": ["React", "TypeScript", "PostgreSQL", "Supabase", "Vitest"],
+    "href": "/work/guestflow"
+  }
+]
   }
 }

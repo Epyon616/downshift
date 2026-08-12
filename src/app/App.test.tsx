@@ -1,13 +1,16 @@
 import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import App from './App';
-import ConfigsProvider from './Components/Contexts/ConfigContext/ConfigContextProvider';
-import configData from './Conf/config.json';
+import ConfigsProvider from '../Components/Contexts/ConfigContext/ConfigContextProvider';
+import configData from '../Conf/config.json';
 
 const renderApp = () =>
   render(
-    <ConfigsProvider configJson={configData}>
-      <App />
-    </ConfigsProvider>
+    <MemoryRouter>
+      <ConfigsProvider configJson={configData}>
+        <App />
+      </ConfigsProvider>
+    </MemoryRouter>
   );
 
 describe('App', () => {

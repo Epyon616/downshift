@@ -9,7 +9,11 @@ const HeroImage = () => {
         <div className="hero-text">
           <Logo />
         </div>
-        <span className="scroll blink-smooth">Scroll <br /> &#x25BC;</span>
+        <div className="intro">
+          <h1>SENIOR SOFTWARE ENGINEER</h1> 
+          <p>React · TypeScript · Node.js · SaaS</p>
+        </div>
+        <span className="scroll blink-smooth">Scroll <br /> <span className="scroll-indicator__arrow">&#x25BC;</span></span>
       </div>
     </div>
   );

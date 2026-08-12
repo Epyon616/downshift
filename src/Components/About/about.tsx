@@ -3,36 +3,44 @@ import './about.scss';
 
 const AboutSection = () => (
   <section className="about">
-    <h2>
-      I’m Lee Richmond, a full-stack developer based in Redditch, Worcestershire, UK.
-    </h2>
     <div className="about-bio">
       <div>
-        <p>
-          My journey into development started in 1999 when I built my first HTML website
-          for a band I was playing in. What began as curiosity quickly evolved into a
-          20-year pursuit of learning, experimenting, and refining my craft.
-        </p>
-        <p>
-          Over the years, I’ve worked across a wide range of languages, frameworks, and methodologies. Today, I’m particularly passionate about <strong>Ruby</strong> and <strong>JavaScript</strong>. Recently, my focus has been on building modern, scalable applications using <strong>Node.js</strong>, <strong>React</strong>, and <strong>Redux</strong> — technologies I enjoy for their flexibility, performance, and thriving ecosystems.
-        </p>
-        <p>
-          I’m a strong advocate of <strong>Test-Driven Development (TDD)</strong>. It shapes how I build software — helping me confidently step into legacy codebases, design clean architectures, and deliver reliable, maintainable solutions.
-        </p>
-        <p>
-          I care about building software that lasts — not just code that works today, but systems that are thoughtful, well-tested, and built to evolve.
-        </p>
+        <h2>
+          About me
+        </h2>
+        <p>I'm Lee Richmond, a UK-based Senior Software Engineer with extensive experience building and modernising production web applications across SaaS, healthcare and other data-driven products. I work primarily with React, TypeScript and Node.js, taking products from technical design through implementation, testing and production.</p>
+        <p>I'm particularly interested in solving complex product and engineering problems with simple, maintainable solutions. My work has included application architecture, API integrations, backend services, CI/CD, mentoring and improving engineering standards across teams.</p>
       </div>
       <div>
         <img src={leeRichmondImage} alt="Lee Richmond full-stack developer" />
       </div>
     </div>
 
-    <p className="cta">
+    <div className="capability-blocks">
+      <div>
+        <h4>Architecture & Ownership</h4>
+        <p>Pragmatic technical decisions, greenfield architecture and modernising existing systems.</p>
+      </div>
+      <div>
+        <h4>Engineering Quality</h4>
+        <p>Automated testing, CI/CD, code review and standards that keep software maintainable.</p>
+      </div>
+      <div>
+        <h4>Technical Leadership</h4>
+        <p>Mentoring engineers, improving team practices and communicating technical decisions clearly.</p>
+      </div>
+    </div>
+    <div className="cta">
       <strong>
-        If you’re looking for a developer who values clean code, clear communication, and long-term thinking, <a href="#contact-me">let’s talk</a>. I’d love to help bring your next idea to life.
+        <p>
+          I'm looking to work with teams that value good engineering, clear communication and pragmatic problem-solving.
+        </p>
+        <p>
+          If you're building something that matters</p>
+        <p> <a href="#contact-me">let’s talk</a>.
+        </p>
       </strong>
-    </p>
+    </div>
   </section>
 );
 
