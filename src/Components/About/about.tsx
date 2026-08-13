@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import leeRichmondImage from '../../Assets/lee_richmond.jpg';
 import './about.scss';
 
@@ -36,8 +37,10 @@ const AboutSection = () => (
           I'm looking to work with teams that value good engineering, clear communication and pragmatic problem-solving.
         </p>
         <p>
-          If you're building something that matters</p>
-        <p> <a href="#contact-me">let’s talk</a>.
+          If you're building something that matters
+        </p>
+        <p>
+          <Link to="/" state={{ scrollTo: 'contact' }}>let’s talk</Link>.
         </p>
       </strong>
     </div>

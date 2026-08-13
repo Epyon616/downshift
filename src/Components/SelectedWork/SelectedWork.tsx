@@ -8,7 +8,7 @@ const SelectedWork = () => {
   const { configs: { work: {  selectedWork } } } = useContext(ConfigContext);
 
   return (
-    <section className="selected-work" aria-labelledby="selected-work-title">
+    <section className="selected-work" aria-labelledby="selected-work-title" id="selected-work">
       <div className="selected-work__inner">
         <div className="selected-work__header">
           <h2 id="selected-work-title">Selected work</h2>

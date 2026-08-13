@@ -1,7 +1,9 @@
 import { AboutSection, ClientList, Footer, Header, HeroImage, SelectedWork, SocialLinks } from '../Components';
+import { useScrollToLocationState } from '../hooks';
 import ContactSection from '../Sections';
 
 const HomePage = () => { 
+  useScrollToLocationState();
   return (
     <>
       <Header />
@@ -11,9 +13,10 @@ const HomePage = () => {
         <SocialLinks />
         <SelectedWork />
         <ClientList />
-        <ContactSection /> 
+        <ContactSection />  
         <Footer />
       </main>
+      
     </>
   );
 }

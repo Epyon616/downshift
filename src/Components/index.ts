@@ -1,21 +1,10 @@
-import AboutSection from './About';
-import ContactForm from './ContactForm';
-import ContentBlock from './ContentBlock';
-import ClientList from './Clients';
-import Footer from './Footer';
-import HeroImage from './Hero';
-import Header from './Header';
-import SocialLinks from './SocialLinks';
-import SelectedWork from './SelectedWork';
-
-export { 
-  AboutSection, 
-  ClientList, 
-  ContactForm, 
-  ContentBlock, 
-  Footer, 
-  HeroImage, 
-  Header,
-  SelectedWork,
-  SocialLinks
-};
+export { default as AboutSection } from './About';
+export { default as ContactForm } from './ContactForm';
+export { default as ContentBlock } from './ContentBlock';
+export { default as ClientList } from './Clients';
+export { default as Footer } from './Footer';
+export { default as HeroImage } from './Hero';
+export { default as Header } from './Header';
+export { default as SocialLinks } from './SocialLinks';
+export { default as SelectedWork } from './SelectedWork';
+export { CaseStudyHero, CaseStudyLayout, CaseStudySection, CaseStudyStory, CaseStudyNavigation } from './CaseStudy';

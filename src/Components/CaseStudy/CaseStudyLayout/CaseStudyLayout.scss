@@ -1,0 +1,47 @@
+.case-study-layout {
+  min-height: 100vh;
+
+  &__main {
+    width: min(100%, 1440px);
+    min-height: 100vh;
+    margin: 2rem auto 4rem;
+  }
+
+  &__footer {
+    padding: 2rem 1rem 3rem;
+
+    text-align: center;
+
+    small {
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .case-study-layout {
+    &__main {
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.case-study-placeholder {
+  width: min(100%, 1280px);
+  margin: 3rem auto;
+  padding: 3rem;
+
+  text-align: center;
+
+  background: rgba(10, 21, 39, 0.96);
+  border-radius: 1.5rem;
+
+  span {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+}
