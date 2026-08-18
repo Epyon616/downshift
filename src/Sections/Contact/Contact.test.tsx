@@ -13,7 +13,7 @@ const renderWithConfig = () =>
 describe('ContactSection', () => {
   it('renders the section title from config', () => {
     renderWithConfig();
-    expect(screen.getByText(configData.contactForm.title)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: configData.contactForm.title })).toBeInTheDocument();
   });
 
   it('renders the tagline from config', () => {
@@ -28,6 +28,6 @@ describe('ContactSection', () => {
 
   it('has the correct anchor id for navigation', () => {
     const { container } = renderWithConfig();
-    expect(container.querySelector('#contact-me')).toBeInTheDocument();
+    expect(container.querySelector('#contact')).toBeInTheDocument();
   });
 });

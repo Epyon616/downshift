@@ -13,6 +13,12 @@ describe('Notification', () => {
     it('should have the show class', () => {
       render(<Notification showNotification={true} message='test' />);
       expect(screen.getByText('test')).toHaveClass('show');
+      expect(screen.getByRole('status')).toHaveAttribute('aria-live', 'polite');
+    });
+
+    it('announces errors assertively', () => {
+      render(<Notification showNotification message='test error' type='error' />);
+      expect(screen.getByRole('alert')).toHaveAttribute('aria-live', 'assertive');
     });
   });
 });

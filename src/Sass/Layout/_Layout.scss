@@ -1,5 +1,7 @@
+@use '../Abstracts/Variables' as *;
+
 body {
-  font-size: 16px;
+  font-size: $font-size-base;
   width: 100vw;
 }
 

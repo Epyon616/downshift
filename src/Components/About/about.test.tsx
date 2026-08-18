@@ -1,24 +1,33 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import ConfigsProvider from '../Contexts/ConfigContext/ConfigContextProvider';
+import configData from '../../Conf/config.json';
 import AboutSection from './about';
+
+const renderAboutSection = () => render(
+  <MemoryRouter>
+    <ConfigsProvider configJson={configData}><AboutSection /></ConfigsProvider>
+  </MemoryRouter>
+);
 
 describe('AboutSection', () => {
   it('renders the section element', () => {
-    const { container } = render(<AboutSection />);
+    const { container } = renderAboutSection();
     expect(container.querySelector('section.about')).toBeInTheDocument();
   });
 
   it('renders the heading', () => {
-    render(<AboutSection />);
+    renderAboutSection();
     expect(screen.getByRole('heading', { level: 2 })).toBeInTheDocument();
   });
 
   it('renders the profile image', () => {
-    render(<AboutSection />);
+    renderAboutSection();
     expect(screen.getByAltText(/Lee Richmond/i)).toBeInTheDocument();
   });
 
   it('renders the CTA link to contact section', () => {
-    render(<AboutSection />);
-    expect(screen.getByRole('link', { name: /let.s talk/i })).toHaveAttribute('href', '#contact-me');
+    renderAboutSection();
+    expect(screen.getByRole('link', { name: /let.s talk/i })).toHaveAttribute('href', '/');
   });
 });

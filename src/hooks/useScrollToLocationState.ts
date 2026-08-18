@@ -21,6 +21,7 @@ const useScrollToLocationState = () => {
       return;
     }
 
+    element.focus({ preventScroll: true });
     element.scrollIntoView({
       behavior: 'smooth',
       block: 'start',

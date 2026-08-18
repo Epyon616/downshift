@@ -17,6 +17,8 @@ describe('TextArea', () => {
     );
 
     const textarea = screen.getByLabelText('test');
+    expect(textarea).toHaveAttribute('id', 'test');
+    expect(textarea).not.toHaveAttribute('aria-labelledby');
     expect(mockHandleChange).not.toHaveBeenCalled();
     fireEvent.change(textarea, {target: {value: 'abcde'}});
     expect(mockHandleChange).toHaveBeenCalled();

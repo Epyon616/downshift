@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import Logo from '../Logo';
+import { ConfigContext } from '../Contexts';
 import './Hero.scss'
 
 
 const HeroImage = () => {
+  const { configs: { content: { hero } } } = useContext(ConfigContext);
   return (
     <div className="hero-image">
       <div className="overlay">
@@ -10,10 +13,10 @@ const HeroImage = () => {
           <Logo />
         </div>
         <div className="intro">
-          <h1>SENIOR SOFTWARE ENGINEER</h1> 
-          <p>React · TypeScript · Node.js · SaaS</p>
+          <h1>{hero.title}</h1>
+          <p>{hero.skills}</p>
         </div>
-        <span className="scroll blink-smooth">Scroll <br /> <span className="scroll-indicator__arrow">&#x25BC;</span></span>
+        <span className="scroll blink-smooth">{hero.scrollLabel} <br /> <span className="scroll-indicator__arrow">&#x25BC;</span></span>
       </div>
     </div>
   );

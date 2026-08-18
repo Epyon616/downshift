@@ -3,13 +3,32 @@
 @use '../Sass/Layout/Layout' as *;
 @use '../Sass/Typography/Typography' as *;
 
+.skip-link {
+  position: fixed;
+  top: $space-4;
+  left: $space-4;
+  z-index: 100;
+
+  padding: $space-3 $space-4;
+
+  background: $color-text-primary;
+  color: $color-text-inverse;
+  border-radius: $radius-control;
+
+  transform: translateY(calc(-100% - #{$space-8}));
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
 body {
   background-image: url('../Assets/cover-image.png');
   background-size: cover;
   background-attachment: fixed;
   color: $color-text-primary;
-  font-size: 18px;
-  text-shadow: 1px 1px 3px black;
+  font-size: $font-size-body-lg;
+  text-shadow: 1px 1px 3px $color-black;
 
   p {
     line-height: 155%;
@@ -17,7 +36,7 @@ body {
   }
 
   a {
-    color: $color-accent-primary;
+    color: $color-accent-text;
     text-decoration: none;
     
     &:hover {
@@ -26,16 +45,16 @@ body {
   }
 
   .content {
-    max-width: 1200px;
+    max-width: $container-content;
     margin: 0 auto;
     margin-bottom: 50px;
     padding: 10px 45px;
-    border-radius: 16px;
+    border-radius: $radius-image;
     background-color: $color-bg-primary;
     box-sizing: border-box;
     
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $breakpoint-desktop) {
       width: 93vw;
       padding: 10px 30px;
     }

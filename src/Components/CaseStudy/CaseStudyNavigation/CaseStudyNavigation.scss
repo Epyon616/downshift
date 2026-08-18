@@ -1,20 +1,22 @@
+@use '../../../Sass/Abstracts/Variables' as *;
+
 .case-study-navigation {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  width: min(100%, 1280px);
-  margin: 3rem auto 0;
+  width: min(100%, $container-wide);
+  margin: $space-12 auto 0;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid $color-border-medium;
+  border-bottom: 1px solid $color-border-medium;
 
   &__item {
-    padding: 2rem 0;
+    padding: $space-8 0;
       text-align: left;
     a {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: $space-2;
 
       color: inherit;
       text-decoration: none;
@@ -26,18 +28,18 @@
   }
 
   &__label {
-    color: #ed174c;
+    color: $color-accent-text;
 
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: $font-size-caption;
+    font-weight: $font-weight-semibold;
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
   &__title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.2;
+    font-size: $font-size-display-medium;
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-heading;
   }
 
   a:hover &__title {
@@ -47,19 +49,19 @@
   }
 
   a:focus-visible {
-    outline: 2px solid #ed174c;
-    outline-offset: 0.5rem;
+    outline: 2px solid $color-accent-text;
+    outline-offset: $space-2;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-tablet) {
   .case-study-navigation {
     grid-template-columns: 1fr;
 
     &__item {
-      padding: 1.5rem 0;
+      padding: $space-6 0;
       &--next {
-        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        border-top: 1px solid $color-border-medium;
         text-align: left;
       }
     }

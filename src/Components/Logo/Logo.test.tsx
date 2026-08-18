@@ -1,10 +1,11 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
+import render from '../../test/renderWithConfig';
 import Logo from './Logo';
 
 describe('Logo', () => {
-  it('renders the logo image', () => {
-    render(<Logo />);
-    expect(screen.getByRole('img')).toBeInTheDocument();
+  it('renders the logo image as decorative', () => {
+    const { container } = render(<Logo />);
+    expect(container.querySelector('img')).toHaveAttribute('alt', '');
   });
 
   it('renders the brand name text', () => {

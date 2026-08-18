@@ -1,5 +1,7 @@
+@use '../../Sass/Abstracts/Variables' as *;
+
 .content {
   &.case-study {
-    margin-top: 4rem;
+    margin-top: $space-16;
   }
 }

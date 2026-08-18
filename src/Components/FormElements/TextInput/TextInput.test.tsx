@@ -18,6 +18,8 @@ describe('TextInput', () => {
     );
 
     const input = screen.getByLabelText('test');
+    expect(input).toHaveAttribute('id', 'test');
+    expect(input).not.toHaveAttribute('aria-labelledby');
     expect(mockHandleChange).not.toHaveBeenCalled();
     fireEvent.change(input, {target: {value: 'abcde'}});
     expect(mockHandleChange).toHaveBeenCalled();

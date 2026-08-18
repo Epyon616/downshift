@@ -1,22 +1,24 @@
-import { AboutSection, ClientList, Footer, Header, HeroImage, SelectedWork, SocialLinks } from '../Components';
-import { useScrollToLocationState } from '../hooks';
+import { useContext } from 'react';
+import { AboutSection, ClientList, Footer, HeroImage, SelectedWork, SocialLinks } from '../Components';
+import { ConfigContext } from '../Components/Contexts';
+import { useDocumentTitle, useScrollToLocationState } from '../hooks';
 import ContactSection from '../Sections';
 
 const HomePage = () => { 
+  const { configs: { content: { pageTitles } } } = useContext(ConfigContext);
   useScrollToLocationState();
+  useDocumentTitle(pageTitles.home);
   return (
     <>
-      <Header />
       <HeroImage />
-      <main className='content'>
+      <main className='content' id="main-content" tabIndex={-1}>
         <AboutSection />
         <SocialLinks />
         <SelectedWork />
         <ClientList />
-        <ContactSection />  
-        <Footer />
+        <ContactSection />
       </main>
-      
+      <Footer />
     </>
   );
 }

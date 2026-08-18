@@ -1,13 +1,13 @@
 @use '../../Sass/Abstracts/Variables' as *;
 
 .footer {
-  width: min(100%, 1200px);
+  width: min(100%, $container-content);
   height: 20px;
   padding: 2rem 1rem 3rem;
 
 
   text-align: center;
   p {
-    font-size: 0.8rem;
+    font-size: $font-size-label;
   }
 }

@@ -2,12 +2,11 @@ import { render } from '@testing-library/react';
 import SubmitButton from './SubmitButton';
 
 describe('SubmitButton', () => {
-  const mockSubmit = jest.fn();
   let button;
 
   describe('when disabled is true', () => {
     test('should render the button disabled', () => {
-      render(<SubmitButton value="test button" handleSubmit={mockSubmit} disabled /> );
+      render(<SubmitButton value="test button" disabled /> );
       button = document.querySelector('input');
       expect(button).toBeDisabled();
     })
@@ -15,7 +14,7 @@ describe('SubmitButton', () => {
 
   describe('when disabled is false', () => {
     test('should not render the button disabled', () => {
-      render(<SubmitButton value="test button" handleSubmit={mockSubmit} disabled={false} /> );
+      render(<SubmitButton value="test button" disabled={false} /> );
       button = document.querySelector('input');
       expect(button).not.toBeDisabled();
     })

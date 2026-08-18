@@ -1,224 +1,141 @@
+import { useContext } from 'react';
 import {CaseStudyHero, CaseStudyLayout, CaseStudyNavigation, CaseStudySection, CaseStudyStory } from '../../Components';
+import { ConfigContext } from '../../Components/Contexts';
+import { useDocumentTitle } from '../../hooks';
 
 const HealthinotePage = () => {
+  const { configs: { caseStudies: { healthinote: copy }, content: { storyNumbers, pageTitles } } } = useContext(ConfigContext);
+  useDocumentTitle(pageTitles.healthinote);
   return (
     <CaseStudyLayout>
       <CaseStudyHero
-        category="Healthcare · SaaS"
-        title="Healthinote"
-        subtitle="Personalised healthcare information platform"
-        introduction="Senior engineering across a production healthcare platform, spanning frontend development, backend services, API integrations, architecture and technical leadership."
-        technologies={['React', 'TypeScript', 'Node.js', 'APIs']}
+        category={copy.healthcare_saas}
+        title={copy.healthinote}
+        subtitle={copy.personalised_healthcare_information_platform}
+        introduction={copy.senior_engineering_across_a_production_healthcare}
+        technologies={[copy.react, copy.typescript, copy.node_js, copy.apis]}
       />
       <CaseStudySection
-        label="The product"
-        title="Making healthcare information easier to understand and act on"
+        label={copy.the_product}
+        title={copy.making_healthcare_information_easier_to_understand}
       >
         <p>
-          Healthinote is Cognitant’s digital health platform for delivering
-          accessible, personalised healthcare information and self-management
-          tools. It helps patients better understand their health, treatment
-          options and medicines, while supporting healthcare organisations and
-          life sciences companies with patient education, clinical trial
-          engagement, disease awareness and onboarding for new therapies.
-        </p>
+          {copy.healthinote_is_cognitant_s_digital_health}</p>
 
         <p>
-          The platform operates within real healthcare workflows and is approved
-          for use by NHS organisations, including integration with NHS login. That
-          means the product has to balance accessibility and ease of use with the
-          reliability, security and governance expected from production healthcare
-          software.
-        </p>
+          {copy.the_platform_operates_within_real_healthcare}</p>
       </CaseStudySection>
       <CaseStudySection
-        label="My role"
-        title="Senior engineering across the product"
+        label={copy.my_role}
+        title={copy.senior_engineering_across_the_product}
       >
         <p>
-          I worked across Healthinote as a Senior Software Engineer, contributing to
-          frontend and backend development while taking responsibility for technical
-          decisions, application architecture and engineering quality.
-        </p>
+          {copy.i_worked_across_healthinote_as_a}</p>
         <div className="case-study-responsibilities">
           <article className="case-study-responsibility">
-            <h3>Frontend engineering</h3>
+            <h3>{copy.frontend_engineering}</h3>
             <p>
-              Building and evolving React and TypeScript applications, reusable
-              components and user-facing functionality with a focus on accessibility,
-              maintainability and performance.
-            </p>
+              {copy.building_and_evolving_react_and_typescript}</p>
           </article>
 
           <article className="case-study-responsibility">
-            <h3>Backend & integrations</h3>
+            <h3>{copy.backend_integrations}</h3>
             <p>
-              Developing and supporting backend services and APIs, integrating internal
-              and external systems and ensuring data moved reliably between different
-              parts of the platform.
-            </p>
+              {copy.developing_and_supporting_backend_services_and}</p>
           </article>
 
           <article className="case-study-responsibility">
-            <h3>Architecture & quality</h3>
+            <h3>{copy.architecture_quality}</h3>
             <p>
-              Contributing to architectural decisions, improving existing application
-              structure and establishing practices that made the codebase easier to
-              understand, test and evolve.
-            </p>
+              {copy.contributing_to_architectural_decisions_improving_existing}</p>
           </article>
 
           <article className="case-study-responsibility">
-            <h3>Technical leadership</h3>
+            <h3>{copy.technical_leadership}</h3>
             <p>
-              Mentoring junior engineers, reviewing code, introducing shared engineering
-              standards and helping the team make considered technical decisions.
-            </p>
+              {copy.mentoring_junior_engineers_reviewing_code_introducing}</p>
           </article>
         </div>
       </CaseStudySection>
       <CaseStudySection
-        label="The engineering"
-        title="Improving the platform while continuing to ship"
+        label={copy.the_engineering}
+        title={copy.improving_the_platform_while_continuing_to}
       >
         <p>
-          Healthinote was an established production platform with active client
-          work, so improving the codebase couldn't come at the expense of delivery.
-          I focused on making incremental improvements to frontend architecture,
-          engineering standards and reusable tooling while continuing to build and
-          support new healthcare experiences.
-        </p>
+          {copy.healthinote_was_an_established_production_platform}</p>
 
         <div className="case-study-stories">
           <CaseStudyStory
-            number="01"
-            title="Strengthening the frontend foundations"
+            number={storyNumbers[0]}
+            title={copy.strengthening_the_frontend_foundations}
           >
             <p>
-              The frontend had grown organically, with component files often
-              exceeding 600 lines and combining rendering, business logic, state
-              management, hooks and styling in a single place. Linting existed, but
-              wasn't configured strongly enough to provide meaningful consistency or
-              protection.
-            </p>
+              {copy.the_frontend_had_grown_organically_with}</p>
 
             <p>
-              I took ownership of improving the frontend engineering practices:
-              introducing clearer linting and code-quality rules, adding pre-commit
-              checks, breaking large components into smaller focused units and
-              introducing tests where they provided useful coverage.
-            </p>
+              {copy.i_took_ownership_of_improving_the}</p>
 
             <p>
-              Rather than attempting a disruptive rewrite, these improvements were
-              introduced incrementally alongside ongoing product development, making
-              the codebase easier to understand, review and safely extend.
-            </p>
+              {copy.rather_than_attempting_a_disruptive_rewrite}</p>
           </CaseStudyStory>
           <CaseStudyStory
-            number="02"
-            title="Building a reusable component system"
+            number={storyNumbers[1]}
+            title={copy.building_a_reusable_component_system}
           >
             <p>
-              The existing component library had accumulated components that were
-              often created for a single use case, limiting reuse and allowing
-              inconsistencies to develop across the product.
-            </p>
+              {copy.the_existing_component_library_had_accumulated}</p>
 
             <p>
-              I designed a second-generation component library around atomic design
-              principles, starting with foundations such as colour and typography
-              before building reusable links, form controls, cards and other
-              interface components.
-            </p>
+              {copy.i_designed_a_second_generation_component}</p>
 
             <p>
-              Storybook became an important part of that process, providing a shared
-              source of truth between design and engineering. It allowed components
-              and their variations to be reviewed in isolation, helped identify
-              inconsistencies in proposed designs and created a stronger foundation
-              for building future product features more quickly and consistently.
-            </p>
+              {copy.storybook_became_an_important_part_of}</p>
           </CaseStudyStory>
           <CaseStudyStory
-            number="03"
-            title="Streamlining client information hub delivery"
+            number={storyNumbers[2]}
+            title={copy.streamlining_client_information_hub_delivery}
           >
             <p>
-              New information hubs combined bespoke client requirements with large
-              amounts of healthcare content. Designs were typically provided first,
-              with the implementation requiring me to determine what was already
-              supported by the platform and work with the backend developer to
-              introduce any additional API capabilities that were needed.
-            </p>
+              {copy.new_information_hubs_combined_bespoke_client}</p>
 
             <p>
-              A significant bottleneck was preparing client content. Although content
-              documents had been designed around the application's structured JSON
-              format, completed documents frequently came back in inconsistent
-              formats. This meant valuable development time was being spent manually
-              restructuring content before it could be used by the platform.
-            </p>
+              {copy.a_significant_bottleneck_was_preparing_client}</p>
 
             <p>
-              I introduced an LLM-assisted workflow using Kiro to accelerate this
-              transformation, converting supplied content into the application's
-              established JSON structure rather than repeatedly formatting it by
-              hand. This reduced a repetitive part of delivering new hubs while
-              keeping the application's existing content model and development
-              workflow intact.
-            </p>
+              {copy.i_introduced_an_llm_assisted_workflow}</p>
           </CaseStudyStory>
         </div>
       </CaseStudySection>
       <CaseStudySection
-          label="The outcome"
-          title="A stronger foundation for continued development"
+          label={copy.the_outcome}
+          title={copy.a_stronger_foundation_for_continued_development}
         >
           <p>
-            My work on Healthinote went beyond delivering individual features. By
-            improving frontend architecture, establishing stronger engineering
-            practices and creating a more reusable component system, I helped make
-            ongoing development more consistent and maintainable.
-          </p>
+            {copy.my_work_on_healthinote_went_beyond}</p>
 
           <p>
-            These improvements were made alongside continued delivery of client work,
-            allowing the platform to evolve without requiring a disruptive rewrite.
-            The practices and patterns introduced also gave the wider team a clearer
-            foundation for approaching frontend development as the product continued
-            to grow.
-          </p>
+            {copy.these_improvements_were_made_alongside_continued}</p>
 
           <div className="case-study-outcomes">
             <div className="case-study-outcome">
-              <h3>More maintainable frontend</h3>
+              <h3>{copy.more_maintainable_frontend}</h3>
 
               <p>
-                Smaller, focused components, stronger code-quality tooling and
-                increased test coverage made the application easier to understand and
-                change safely.
-              </p>
+                {copy.smaller_focused_components_stronger_code_quality}</p>
             </div>
 
             <div className="case-study-outcome">
-              <h3>More consistent product development</h3>
+              <h3>{copy.more_consistent_product_development}</h3>
 
               <p>
-                A reusable component system and Storybook provided a shared foundation
-                for design and engineering, reducing unnecessary one-off
-                implementations.
-              </p>
+                {copy.a_reusable_component_system_and_storybook}</p>
             </div>
 
             <div className="case-study-outcome">
-              <h3>More efficient client delivery</h3>
+              <h3>{copy.more_efficient_client_delivery}</h3>
 
               <p>
-                Improved development patterns and an LLM-assisted content workflow
-                reduced repetitive work involved in turning client requirements and
-                healthcare content into production experiences.
-              </p>
+                {copy.improved_development_patterns_and_an_llm}</p>
             </div>
           </div>
       </CaseStudySection>

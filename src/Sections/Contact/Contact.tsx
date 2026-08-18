@@ -8,8 +8,8 @@ const ContactSection = () => {
   const { configs: { contactForm } } = useContext(ConfigContext);
   return (
     <>
-      <div className="contact-section-intro" id="contact">
-        <h3>{contactForm.title}</h3>
+      <div className="contact-section-intro" id="contact" tabIndex={-1}>
+        <h2>{contactForm.title}</h2>
         <p>{contactForm.tagline}</p>
       </div>
       <ContactForm /> 

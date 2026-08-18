@@ -3,7 +3,68 @@
   "domain": "downshift.io",
   "email": {
     "address": "lee@downshift.io",
-    "subject": "Enquiry from Downshift.io website"
+    "subject": "Enquiry from Downshift.io website",
+    "contactDetailsLabel": "contact details:",
+    "phoneLabel": "phone:",
+    "emailLabel": "email:"
+  },
+  "content": {
+    "brandName": "Downshift",
+    "brandWordmarkStart": "down",
+    "brandWordmarkEnd": "shift",
+    "technologyListSuffix": "technologies",
+    "storyNumbers": ["01", "02", "03"],
+    "skipLinkLabel": "Skip to main content",
+    "pageTitles": {
+      "home": "Lee Richmond | Senior Software Engineer",
+      "healthinote": "Healthinote case study | Lee Richmond",
+      "assetService": "Asset Service case study | Lee Richmond",
+      "guestFlow": "GuestFlow case study | Lee Richmond"
+    },
+    "hero": {
+      "title": "SENIOR SOFTWARE ENGINEER",
+      "skills": "React · TypeScript · Node.js · SaaS",
+      "scrollLabel": "Scroll"
+    },
+    "about": {
+      "title": "About me",
+      "biography": [
+        "I'm Lee Richmond, a UK-based Senior Software Engineer with extensive experience building and modernising production web applications across SaaS, healthcare and other data-driven products. I work primarily with React, TypeScript and Node.js, taking products from technical design through implementation, testing and production.",
+        "I'm particularly interested in solving complex product and engineering problems with simple, maintainable solutions. My work has included application architecture, API integrations, backend services, CI/CD, mentoring and improving engineering standards across teams."
+      ],
+      "imageAlt": "Lee Richmond full-stack developer",
+      "capabilities": [
+        { "title": "Architecture & Ownership", "description": "Pragmatic technical decisions, greenfield architecture and modernising existing systems." },
+        { "title": "Engineering Quality", "description": "Automated testing, CI/CD, code review and standards that keep software maintainable." },
+        { "title": "Technical Leadership", "description": "Mentoring engineers, improving team practices and communicating technical decisions clearly." }
+      ],
+      "cta": [
+        "I'm looking to work with teams that value good engineering, clear communication and pragmatic problem-solving.",
+        "If you're building something that matters"
+      ],
+      "ctaLink": "let’s talk"
+    },
+    "clients": {
+      "title": "Who I've worked with",
+      "description": "I've worked with teams across healthcare, technology, ecommerce and digital products, helping build, improve and modernise production software.",
+      "names": ["Visfo Health", "EE", "SignStix", "Collect+", "Unboxed", "On The Beach"]
+    },
+    "selectedWork": {
+      "title": "Selected work",
+      "description": "A selection of projects that show how I approach product development, architecture and complex engineering problems.",
+      "linkLabel": "View case study"
+    },
+    "siteHeader": {
+      "homeLabel": "Downshift home",
+      "logoAlt": "Downshift Ltd",
+      "navigationLabel": "Main navigation",
+      "contactLabel": "Contact"
+    },
+    "caseStudyNavigation": {
+      "navigationLabel": "Case study navigation",
+      "selectedWorkLabel": "Selected work",
+      "portfolioLabel": "Back to portfolio"
+    }
   },
   "contactForm": {
     "title": "Let's work together",
@@ -11,15 +72,23 @@
     "disabledButtonLabel": "Send message →",
     "enabledButtonLabel": "Send message →",
     "thankyouMessage": "Thank you! I'll be in touch soon!",
+    "errorMessage": "Sorry, your message could not be sent. Please try again.",
+    "requiredFieldsMessage": "All fields are required.",
     "labels": {
       "nameLabel": "Name",
-      "emailLabel":  "Email",
+      "emailLabel": "Email",
       "contactNumberLabel": "Contact No",
       "messageLabel": "Message"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "email": "name@domain.com",
+      "contactNumber": "Your contact number",
+      "message": "Tell me a little about the role or project..."
     }
   },
   "links": {
-    "github":  {
+    "github": {
       "link": "https://github.com/epyon616",
       "label": "Github profile of Lee Richmond"
     },
@@ -28,35 +97,204 @@
       "label": "Linked In profile of Lee Richmond"
     }
   },
-    "work": {
+  "work": {
     "selectedWork": [
-  {
-    "title": "Healthinote",
-    "category": "Healthcare · SaaS",
-    "subtitle": "Personalised healthcare information platform",
-    "description":
-      "Senior engineering across a production healthcare application, including React and TypeScript development, API integrations, architecture and technical leadership.",
-    "technologies": ["React", "TypeScript", "Node.js", "APIs"],
-    "href": "/work/healthinote"
+      {
+        "title": "Healthinote",
+        "category": "Healthcare · SaaS",
+        "subtitle": "Personalised healthcare information platform",
+        "description": "Senior engineering across a production healthcare application, including React and TypeScript development, API integrations, architecture and technical leadership.",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Node.js",
+          "APIs"
+        ],
+        "href": "/work/healthinote"
+      },
+      {
+        "title": "Asset Service",
+        "category": "Modernisation",
+        "subtitle": "Production service consolidation",
+        "description": "Consolidating three established production services into a single service while preserving API contracts, database behaviour and compatibility with existing consumers.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Knex",
+          "Docker"
+        ],
+        "href": "/work/asset-service"
+      },
+      {
+        "title": "GuestFlow",
+        "category": "SaaS · Product",
+        "subtitle": "Restaurant booking platform",
+        "description": "Designing and building a restaurant booking SaaS from the ground up, covering product decisions, frontend architecture, data modelling and application security.",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "PostgreSQL",
+          "Supabase",
+          "Vitest"
+        ],
+        "href": "/work/guestflow"
+      }
+    ]
   },
-  {
-    "title": "Asset Service",
-    "category": "Modernisation",
-    "subtitle": "Production service consolidation",
-    "description":
-      "Consolidating three established production services into a single service while preserving API contracts, database behaviour and compatibility with existing consumers.",
-    "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Knex", "Docker"],
-    "href": "/work/asset-service"
-  },
-  {
-    "title": "GuestFlow",
-    "category": "SaaS · Product",
-    "subtitle": "Restaurant booking platform",
-    "description":
-      "Designing and building a restaurant booking SaaS from the ground up, covering product decisions, frontend architecture, data modelling and application security.",
-    "technologies": ["React", "TypeScript", "PostgreSQL", "Supabase", "Vitest"],
-    "href": "/work/guestflow"
-  }
-]
+  "caseStudies": {
+    "healthinote": {
+      "healthcare_saas": "Healthcare · SaaS",
+      "healthinote": "Healthinote",
+      "personalised_healthcare_information_platform": "Personalised healthcare information platform",
+      "senior_engineering_across_a_production_healthcare": "Senior engineering across a production healthcare platform, spanning frontend development, backend services, API integrations, architecture and technical leadership.",
+      "react": "React",
+      "typescript": "TypeScript",
+      "node_js": "Node.js",
+      "apis": "APIs",
+      "the_product": "The product",
+      "making_healthcare_information_easier_to_understand": "Making healthcare information easier to understand and act on",
+      "healthinote_is_cognitant_s_digital_health": "Healthinote is Cognitant’s digital health platform for delivering accessible, personalised healthcare information and self-management tools. It helps patients better understand their health, treatment options and medicines, while supporting healthcare organisations and life sciences companies with patient education, clinical trial engagement, disease awareness and onboarding for new therapies.",
+      "the_platform_operates_within_real_healthcare": "The platform operates within real healthcare workflows and is approved for use by NHS organisations, including integration with NHS login. That means the product has to balance accessibility and ease of use with the reliability, security and governance expected from production healthcare software.",
+      "my_role": "My role",
+      "senior_engineering_across_the_product": "Senior engineering across the product",
+      "i_worked_across_healthinote_as_a": "I worked across Healthinote as a Senior Software Engineer, contributing to frontend and backend development while taking responsibility for technical decisions, application architecture and engineering quality.",
+      "frontend_engineering": "Frontend engineering",
+      "building_and_evolving_react_and_typescript": "Building and evolving React and TypeScript applications, reusable components and user-facing functionality with a focus on accessibility, maintainability and performance.",
+      "backend_integrations": "Backend & integrations",
+      "developing_and_supporting_backend_services_and": "Developing and supporting backend services and APIs, integrating internal and external systems and ensuring data moved reliably between different parts of the platform.",
+      "architecture_quality": "Architecture & quality",
+      "contributing_to_architectural_decisions_improving_existing": "Contributing to architectural decisions, improving existing application structure and establishing practices that made the codebase easier to understand, test and evolve.",
+      "technical_leadership": "Technical leadership",
+      "mentoring_junior_engineers_reviewing_code_introducing": "Mentoring junior engineers, reviewing code, introducing shared engineering standards and helping the team make considered technical decisions.",
+      "the_engineering": "The engineering",
+      "improving_the_platform_while_continuing_to": "Improving the platform while continuing to ship",
+      "healthinote_was_an_established_production_platform": "Healthinote was an established production platform with active client work, so improving the codebase couldn't come at the expense of delivery. I focused on making incremental improvements to frontend architecture, engineering standards and reusable tooling while continuing to build and support new healthcare experiences.",
+      "strengthening_the_frontend_foundations": "Strengthening the frontend foundations",
+      "the_frontend_had_grown_organically_with": "The frontend had grown organically, with component files often exceeding 600 lines and combining rendering, business logic, state management, hooks and styling in a single place. Linting existed, but wasn't configured strongly enough to provide meaningful consistency or protection.",
+      "i_took_ownership_of_improving_the": "I took ownership of improving the frontend engineering practices: introducing clearer linting and code-quality rules, adding pre-commit checks, breaking large components into smaller focused units and introducing tests where they provided useful coverage.",
+      "rather_than_attempting_a_disruptive_rewrite": "Rather than attempting a disruptive rewrite, these improvements were introduced incrementally alongside ongoing product development, making the codebase easier to understand, review and safely extend.",
+      "building_a_reusable_component_system": "Building a reusable component system",
+      "the_existing_component_library_had_accumulated": "The existing component library had accumulated components that were often created for a single use case, limiting reuse and allowing inconsistencies to develop across the product.",
+      "i_designed_a_second_generation_component": "I designed a second-generation component library around atomic design principles, starting with foundations such as colour and typography before building reusable links, form controls, cards and other interface components.",
+      "storybook_became_an_important_part_of": "Storybook became an important part of that process, providing a shared source of truth between design and engineering. It allowed components and their variations to be reviewed in isolation, helped identify inconsistencies in proposed designs and created a stronger foundation for building future product features more quickly and consistently.",
+      "streamlining_client_information_hub_delivery": "Streamlining client information hub delivery",
+      "new_information_hubs_combined_bespoke_client": "New information hubs combined bespoke client requirements with large amounts of healthcare content. Designs were typically provided first, with the implementation requiring me to determine what was already supported by the platform and work with the backend developer to introduce any additional API capabilities that were needed.",
+      "a_significant_bottleneck_was_preparing_client": "A significant bottleneck was preparing client content. Although content documents had been designed around the application's structured JSON format, completed documents frequently came back in inconsistent formats. This meant valuable development time was being spent manually restructuring content before it could be used by the platform.",
+      "i_introduced_an_llm_assisted_workflow": "I introduced an LLM-assisted workflow using Kiro to accelerate this transformation, converting supplied content into the application's established JSON structure rather than repeatedly formatting it by hand. This reduced a repetitive part of delivering new hubs while keeping the application's existing content model and development workflow intact.",
+      "the_outcome": "The outcome",
+      "a_stronger_foundation_for_continued_development": "A stronger foundation for continued development",
+      "my_work_on_healthinote_went_beyond": "My work on Healthinote went beyond delivering individual features. By improving frontend architecture, establishing stronger engineering practices and creating a more reusable component system, I helped make ongoing development more consistent and maintainable.",
+      "these_improvements_were_made_alongside_continued": "These improvements were made alongside continued delivery of client work, allowing the platform to evolve without requiring a disruptive rewrite. The practices and patterns introduced also gave the wider team a clearer foundation for approaching frontend development as the product continued to grow.",
+      "more_maintainable_frontend": "More maintainable frontend",
+      "smaller_focused_components_stronger_code_quality": "Smaller, focused components, stronger code-quality tooling and increased test coverage made the application easier to understand and change safely.",
+      "more_consistent_product_development": "More consistent product development",
+      "a_reusable_component_system_and_storybook": "A reusable component system and Storybook provided a shared foundation for design and engineering, reducing unnecessary one-off implementations.",
+      "more_efficient_client_delivery": "More efficient client delivery",
+      "improved_development_patterns_and_an_llm": "Improved development patterns and an LLM-assisted content workflow reduced repetitive work involved in turning client requirements and healthcare content into production experiences."
+    },
+    "assetService": {
+      "platform_modernisation": "Platform · Modernisation",
+      "asset_service": "Asset Service",
+      "consolidating_production_services_into_a_single": "Consolidating production services into a single maintainable platform",
+      "a_legacy_modernisation_project_focused_on": "A legacy modernisation project focused on safely consolidating established file, image and video services while preserving the behaviour relied upon by an existing production system.",
+      "typescript": "TypeScript",
+      "node_js": "Node.js",
+      "knex": "Knex",
+      "postgresql": "PostgreSQL",
+      "docker": "Docker",
+      "the_project": "The project",
+      "modernising_without_breaking_what_already_works": "Modernising without breaking what already works",
+      "the_asset_service_project_involved_consolidating": "The Asset Service project involved consolidating three established production services responsible for file, image and video functionality into a single existing service.",
+      "the_challenge_wasn_t_simply_to": "The challenge wasn't simply to rewrite the services into a cleaner architecture. They were already part of a wider production system, so existing routes, request and response contracts, database behaviour and status codes needed to remain compatible throughout the migration.",
+      "my_role": "My role",
+      "driving_a_safe_incremental_service_consolidation": "Driving a safe, incremental service consolidation",
+      "i_was_responsible_for_working_through": "I was responsible for working through the migration incrementally, tracing existing behaviour across the legacy services and reproducing it within the consolidated Asset Service without changing the contracts relied upon by existing consumers.",
+      "legacy_analysis": "Legacy analysis",
+      "tracing_routes_service_logic_database_access": "Tracing routes, service logic, database access and tests across the existing file, image and video services to understand the behaviour that needed to be preserved.",
+      "backend_architecture": "Backend architecture",
+      "establishing_the_shared_service_structure_around": "Establishing the shared service structure around routes, services, models and Knex-backed database access while keeping the existing database contracts intact.",
+      "environment_integration": "Environment & integration",
+      "integrating_the_consolidated_service_into_the": "Integrating the consolidated service into the existing Docker environment, validating database connectivity and ensuring the service behaved correctly within the wider platform.",
+      "testing_compatibility": "Testing & compatibility",
+      "migrating_existing_tests_adding_integration_coverage": "Migrating existing tests, adding integration coverage and verifying routes incrementally so changes could be introduced with confidence without breaking production behaviour.",
+      "the_engineering": "The Engineering",
+      "consolidating_legacy_services_without_changing_their": "Consolidating legacy services without changing their behaviour",
+      "the_migration_involved_established_production_services": "The migration involved established production services with existing consumers, databases and behaviours that couldn't simply be redesigned. I approached the consolidation incrementally: understand the existing behaviour, establish the foundations in Asset Service, migrate one route at a time and verify compatibility before moving on.",
+      "establishing_shared_database_access": "Establishing shared database access",
+      "the_existing_file_image_and_video": "The existing file, image and video services each communicated with their own established database. The consolidated Asset Service needed access to all three without introducing schema changes or altering the behaviour of the systems already depending on them.",
+      "i_established_the_database_layer_within": "I established the database layer within Asset Service using Knex, creating the required database clients and structuring access so that models remained responsible for queries while services handled business logic and orchestration.",
+      "i_also_extended_the_service_readiness": "I also extended the service readiness checks to verify connectivity to each database independently. This provided an immediate way to validate the service's environment and database dependencies before endpoint migration progressed further.",
+      "migrating_behaviour_route_by_route": "Migrating behaviour route by route",
+      "a_wholesale_rewrite_would_have_introduced": "A wholesale rewrite would have introduced unnecessary risk. Instead, I worked through the legacy services endpoint by endpoint, tracing each request through its route handling, business logic, database queries and existing tests before reproducing that behaviour within Asset Service.",
+      "the_consolidated_implementation_followed_a_clearer": "The consolidated implementation followed a clearer Route → Service → Model structure, separating HTTP concerns, application logic and database access without changing the external contracts relied upon by existing consumers.",
+      "routes_request_and_response_formats_status": "Routes, request and response formats, status codes and database behaviour were treated as compatibility requirements rather than opportunities for redesign. This allowed the internal structure to improve while keeping the migration safe for the wider production system.",
+      "building_confidence_through_integration_testing": "Building confidence through integration testing",
+      "existing_tests_were_brought_across_as": "Existing tests were brought across as functionality moved into Asset Service, preserving the behavioural expectations already captured by the legacy services.",
+      "i_supplemented_that_coverage_with_integration": "I supplemented that coverage with integration tests around the migrated functionality, validating not just isolated application logic but the interaction between routes, services, models and the existing databases.",
+      "the_service_was_also_validated_within": "The service was also validated within the existing Docker environment, exposing configuration and database-connectivity issues early. Combining incremental migration with integration coverage provided a safer feedback loop and reduced the risk of discovering compatibility problems late in the consolidation.",
+      "the_outcome": "The outcome",
+      "a_safer_foundation_for_service_consolidation": "A safer foundation for service consolidation",
+      "the_migration_established_a_clearer_architecture": "The migration established a clearer architecture within Asset Service while preserving the behaviour expected by the wider production platform. Shared database access, explicit service boundaries and improved integration coverage created a foundation for moving functionality out of the legacy services incrementally rather than relying on a high-risk rewrite.",
+      "just_as_importantly_the_approach_made": "Just as importantly, the approach made compatibility a first-class requirement throughout the work. Each piece of functionality could be understood, migrated and verified independently, allowing the internal architecture to improve without forcing unnecessary changes onto existing consumers.",
+      "lower_migration_risk": "Lower migration risk",
+      "route_by_route_migration_and_behavioural": "Route-by-route migration and behavioural verification reduced the risk associated with consolidating established production services.",
+      "clearer_architecture": "Clearer architecture",
+      "separating_http_concerns_business_logic_and": "Separating HTTP concerns, business logic and database access created a more maintainable structure for functionality moving into Asset Service.",
+      "greater_confidence_in_change": "Greater confidence in change",
+      "existing_tests_new_integration_coverage_and": "Existing tests, new integration coverage and database readiness checks provided stronger feedback as functionality moved away from the legacy services."
+    },
+    "guestFlow": {
+      "saas_product": "SaaS · Product",
+      "guestflow": "GuestFlow",
+      "building_a_modern_restaurant_booking_platform": "Building a modern restaurant booking platform from the ground up",
+      "designing_and_developing_a_commercial_saas": "Designing and developing a commercial SaaS platform for independent restaurants, with responsibility spanning product decisions, user experience, application architecture, database design and implementation.",
+      "react": "React",
+      "typescript": "TypeScript",
+      "supabase": "Supabase",
+      "postgresql": "PostgreSQL",
+      "vite": "Vite",
+      "scss": "SCSS",
+      "the_product": "The product",
+      "a_simpler_approach_to_restaurant_reservations": "A simpler approach to restaurant reservations",
+      "guestflow_is_a_restaurant_booking_saas": "GuestFlow is a restaurant booking SaaS platform designed for independent restaurants. The project began with a real-world problem: an existing reservation system that had become slow, outdated and difficult to support, creating a poor experience for both restaurant staff and their customers.",
+      "the_goal_is_to_build_a": "The goal is to build a fast, intuitive and reliable alternative that makes managing reservations straightforward while giving customers a smooth booking experience. The initial focus is deliberately narrow: solve the core reservation problem well, then evolve the platform around the needs of real restaurants.",
+      "my_role": "My role",
+      "owning_the_product_from_concept_to": "Owning the product from concept to implementation",
+      "as_the_creator_and_sole_developer": "As the creator and sole developer of GuestFlow, I am responsible for the product and technical decisions behind the platform, from identifying the initial customer problem and defining the MVP through to architecture, database design, frontend development, testing and deployment.",
+      "product_direction": "Product direction",
+      "defining_the_mvp_around_genuine_restaurant": "Defining the MVP around genuine restaurant problems, prioritising work based on customer value and deliberately avoiding speculative features that don't support the immediate product goals.",
+      "frontend_ux": "Frontend & UX",
+      "designing_and_building_the_react_and": "Designing and building the React and TypeScript application, including responsive interfaces and reusable patterns focused on making everyday restaurant workflows straightforward.",
+      "backend_data": "Backend & data",
+      "designing_the_postgresql_data_model_and": "Designing the PostgreSQL data model and building backend functionality with Supabase, including authentication, Row Level Security and database functions.",
+      "engineering_quality": "Engineering quality",
+      "establishing_the_project_architecture_coding_conventions": "Establishing the project architecture, coding conventions, automated testing and CI practices needed to keep the application maintainable as the product grows.",
+      "the_engineering": "The engineering",
+      "building_for_real_requirements_not_imagined": "Building for real requirements, not imagined complexity",
+      "building_guestflow_from_scratch_gives_me": "Building GuestFlow from scratch gives me control over both the product and technical foundations. I use that freedom to make deliberate engineering decisions around security, maintainability and future change while keeping the architecture proportional to the needs of an early-stage product.",
+      "designing_multi_tenant_security_from_the": "Designing multi-tenant security from the start",
+      "guestflow_needs_to_support_multiple_restaurants": "GuestFlow needs to support multiple restaurants while ensuring that users can only access data belonging to the restaurants they are authorised to work with. Rather than treating that separation purely as a frontend concern, I designed it into the data layer from the beginning.",
+      "the_postgresql_model_establishes_relationships_between": "The PostgreSQL model establishes relationships between restaurants and their users, with Supabase Row Level Security policies enforcing access at the database level. Permissions can then distinguish between roles where required, such as allowing owners and administrators to change restaurant settings while preventing staff from making those changes.",
+      "this_provides_defence_in_depth_the": "This provides defence in depth: the interface can present the appropriate functionality to each user, while the database remains responsible for enforcing the underlying access rules.",
+      "modelling_real_restaurant_operations": "Modelling real restaurant operations",
+      "a_useful_reservation_system_needs_to": "A useful reservation system needs to reflect how an individual restaurant actually operates rather than forcing every venue into the same set of assumptions. I designed the platform around restaurant-specific configuration that can later drive reservation availability and booking behaviour.",
+      "settings_including_booking_duration_booking_intervals": "Settings including booking duration, booking intervals, minimum notice, maximum advance booking windows and party-size limits are modelled per restaurant. Table management adds another part of that operational model, including the ability to maintain and archive tables without unnecessarily destroying historical data.",
+      "building_these_foundations_before_the_reservation": "Building these foundations before the reservation engine keeps future booking logic grounded in explicit restaurant configuration rather than accumulating hard-coded rules throughout the application.",
+      "keeping_the_architecture_proportional_to_the": "Keeping the architecture proportional to the product",
+      "starting_a_new_saas_product_creates": "Starting a new SaaS product creates plenty of opportunities to design for scale and requirements that don't yet exist. I have deliberately kept GuestFlow's architecture focused on the problems the MVP needs to solve, while maintaining clear boundaries that allow the application to evolve.",
+      "react_and_typescript_provide_the_frontend": "React and TypeScript provide the frontend foundation, with a feature-based structure keeping related functionality together. Supabase provides PostgreSQL, authentication, Row Level Security and server-side functionality without introducing a separate backend service before the product requires one.",
+      "decisions_are_made_around_the_simplest": "Decisions are made around the simplest production-quality solution that supports current customer needs. More complex infrastructure can be introduced when real usage justifies it rather than becoming a prerequisite for getting the product into customers' hands.",
+      "the_outcome": "The outcome",
+      "a_production_quality_foundation_for_the": "A production-quality foundation for the MVP",
+      "guestflow_is_still_under_active_development": "GuestFlow is still under active development, but the foundations of the platform are now in place. Core restaurant management, configuration and table functionality provide the operational model needed to move into the reservation experience without having to revisit fundamental architectural decisions.",
+      "more_importantly_the_project_demonstrates_how": "More importantly, the project demonstrates how I approach greenfield product development: understand the customer problem first, establish sensible technical foundations, ship functionality incrementally and allow real product requirements to drive complexity.",
+      "secure_by_design": "Secure by design",
+      "multi_tenant_data_access_and_permissions": "Multi-tenant data access and permissions are enforced through PostgreSQL and Row Level Security rather than relying solely on application behaviour.",
+      "ready_to_evolve": "Ready to evolve",
+      "restaurant_configuration_and_operational_data_provide": "Restaurant configuration and operational data provide a clear foundation for building reservation availability and booking workflows.",
+      "focused_on_shipping": "Focused on shipping",
+      "the_architecture_remains_deliberately_straightforward_allowing": "The architecture remains deliberately straightforward, allowing effort to stay focused on delivering customer value rather than maintaining unnecessary infrastructure."
+    }
   }
 }

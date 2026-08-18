@@ -6,7 +6,7 @@ type IconLinkType = {
 
 const IconLink = ({href, label, icon}: IconLinkType) => (
   <a href={href} target="_blank" aria-label={label}>
-    <img src={icon} className="icon" />
+    <img src={icon} className="icon" alt="" />
   </a>
 );
 

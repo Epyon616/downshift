@@ -1,5 +1,5 @@
-import { render, screen, within } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { fireEvent, render, screen, within } from '@testing-library/react';
+import { MemoryRouter, useLocation } from 'react-router-dom';
 import configData from '../../Conf/config.json';
 import ConfigsProvider from '../Contexts/ConfigContext/ConfigContextProvider';
 import SelectedWork from './SelectedWork';
@@ -11,6 +11,11 @@ const renderSelectedWork = () => render(
     </ConfigsProvider>
   </MemoryRouter>
 );
+
+const LocationState = () => {
+  const location = useLocation();
+  return <output>{JSON.stringify(location.state)}</output>;
+};
 
 describe('SelectedWork', () => {
   it('renders every configured project', () => {
@@ -45,5 +50,22 @@ describe('SelectedWork', () => {
         within(projectCard!).getByRole('link', { name: /view case study/i })
       ).toHaveAttribute('href', project.href);
     });
+  });
+
+  it('requests scrolling to the top of a case study when a project is opened', () => {
+    render(
+      <MemoryRouter>
+        <>
+          <ConfigsProvider configJson={configData}>
+            <SelectedWork />
+          </ConfigsProvider>
+          <LocationState />
+        </>
+      </MemoryRouter>
+    );
+
+    fireEvent.click(screen.getAllByRole('link', { name: /view case study/i })[0]);
+
+    expect(screen.getByText('{"scrollTo":"case-study-page-top"}')).toBeInTheDocument();
   });
 });

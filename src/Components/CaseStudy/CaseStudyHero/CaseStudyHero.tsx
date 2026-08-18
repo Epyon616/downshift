@@ -8,6 +8,7 @@ const CaseStudyHero = ({
   introduction,
   technologies,
 }: CaseStudyHeroProps) => {
+  const { configs: { content: { technologyListSuffix } } } = useContext(ConfigContext);
   return (
     <div className="case-study-hero">
       <span className="case-study-hero__category">{category}</span>
@@ -17,7 +18,7 @@ const CaseStudyHero = ({
 
       <ul
         className="case-study-hero__technologies"
-        aria-label={`${title} technologies`}
+        aria-label={`${title} ${technologyListSuffix}`}
       >
         {technologies.map((technology) => (
           <li key={technology}>{technology}</li>
@@ -28,3 +29,5 @@ const CaseStudyHero = ({
 };
 
 export default CaseStudyHero;
+import { useContext } from 'react';
+import { ConfigContext } from '../../Contexts';

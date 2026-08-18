@@ -1,50 +1,48 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ConfigContext } from '../Contexts';
 import leeRichmondImage from '../../Assets/lee_richmond.jpg';
 import './about.scss';
 
-const AboutSection = () => (
+const AboutSection = () => {
+  const { configs: { content: { about } } } = useContext(ConfigContext);
+  return (
   <section className="about">
     <div className="about-bio">
       <div>
         <h2>
-          About me
+          {about.title}
         </h2>
-        <p>I'm Lee Richmond, a UK-based Senior Software Engineer with extensive experience building and modernising production web applications across SaaS, healthcare and other data-driven products. I work primarily with React, TypeScript and Node.js, taking products from technical design through implementation, testing and production.</p>
-        <p>I'm particularly interested in solving complex product and engineering problems with simple, maintainable solutions. My work has included application architecture, API integrations, backend services, CI/CD, mentoring and improving engineering standards across teams.</p>
+        {about.biography.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
       </div>
       <div>
-        <img src={leeRichmondImage} alt="Lee Richmond full-stack developer" />
+        <img src={leeRichmondImage} alt={about.imageAlt} />
       </div>
     </div>
 
     <div className="capability-blocks">
-      <div>
-        <h4>Architecture & Ownership</h4>
-        <p>Pragmatic technical decisions, greenfield architecture and modernising existing systems.</p>
-      </div>
-      <div>
-        <h4>Engineering Quality</h4>
-        <p>Automated testing, CI/CD, code review and standards that keep software maintainable.</p>
-      </div>
-      <div>
-        <h4>Technical Leadership</h4>
-        <p>Mentoring engineers, improving team practices and communicating technical decisions clearly.</p>
-      </div>
+      {about.capabilities.map((capability) => (
+        <div key={capability.title}>
+          <h3>{capability.title}</h3>
+          <p>{capability.description}</p>
+        </div>
+      ))}
     </div>
     <div className="cta">
       <strong>
         <p>
-          I'm looking to work with teams that value good engineering, clear communication and pragmatic problem-solving.
+          {about.cta[0]}
         </p>
         <p>
-          If you're building something that matters
+          {about.cta[1]}
         </p>
         <p>
-          <Link to="/" state={{ scrollTo: 'contact' }}>let’s talk</Link>.
+          <Link to="/" state={{ scrollTo: 'contact' }}>{about.ctaLink}</Link>.
         </p>
       </strong>
     </div>
   </section>
-);
+  );
+};
 
 export default AboutSection;

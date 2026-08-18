@@ -18,9 +18,8 @@ const TextArea = ({
   <>
     <label htmlFor={fieldName}>{label}</label>
     <textarea 
+      id={fieldName}
       name={fieldName} 
-      aria-label={fieldName}
-      aria-labelledby={fieldName}
       placeholder={placeholderText} 
       onChange={(e) => handleChange(e)} 
       value={value} 

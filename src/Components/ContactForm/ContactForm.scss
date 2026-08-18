@@ -2,8 +2,8 @@
 
 .contact-form {
   text-align: left;
-  width: min(100%, 850px);
-  margin: 3rem auto 0;
+  width: min(100%, $container-form);
+  margin: $space-12 auto 0;
 
   .notification {
     display: none;
@@ -13,9 +13,9 @@
       height: 30px;
       margin-bottom: 20px;
       padding: 20px 0;
-      border-radius: 5px;
+      border-radius: $radius-control;
       text-align: center;
-      font-size: 1.4rem;
+      font-size: $font-size-display-small;
       display: block;
     }
   }
@@ -34,7 +34,7 @@
 
     label {
       margin: 15px 0 10px 0;
-      font-weight: 700;
+      font-weight: $font-weight-bold;
       font-size: $font-size-body-lg;
     }
 
@@ -45,10 +45,10 @@
       &[type="submit"] {
         margin: 10px auto;
         height: 55px;
-        background: #ed174c;
+        background: $color-accent-primary;
         border: none;
         font-size: $font-size-body-lg;
-        color: #FFF;
+        color: $color-white;
         cursor: pointer;
         
         &:disabled {
@@ -68,8 +68,8 @@
 
     input, 
     textarea {
-      font-size: 1rem;
-      border-radius: 5px;
+      font-size: $font-size-body;
+      border-radius: $radius-control;
       border: 2px solid $color-text-primary;
     }
 

@@ -15,11 +15,29 @@ $font-size-h4: 1.375rem;  // 22px
 $font-size-body-lg: 1.125rem; // 18px
 $font-size-body: 1rem;        // 16px
 $font-size-small: 0.875rem;   // 14px
+$font-size-caption: 0.75rem;
+$font-size-label: 0.8rem;
+$font-size-copy: 1.05rem;
+$font-size-subheading: 1.25rem;
+$font-size-display-small: 1.4rem;
+$font-size-display-medium: 1.5rem;
+$font-size-display-large: 1.9rem;
+
+// Font weights
+$font-weight-thin: 100;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
 
 // Line heights
 $line-height-tight: 1.1;
 $line-height-heading: 1.2;
 $line-height-body: 1.7;
+$line-height-copy: 1.6;
+$line-height-relaxed: 1.75;
+$line-height-subheading: 1.3;
+$line-height-compact: 0.95;
 
 // ========================================
 // Color Palette — Modern Dark
@@ -34,6 +52,7 @@ $color-bg-elevated: #334155;     // Hovered cards / modals
 // Brand / Accent
 $color-accent-primary: #E11D48;  // Ruby Red
 $color-accent-secondary: #22D3EE; // Cyan highlight
+$color-accent-text: #FB7185; // Accessible accent text on the primary background
 
 // Text
 $color-text-primary: #F8FAFC;    // Main text
@@ -49,6 +68,20 @@ $color-success: #10B981;
 $color-warning: #F59E0B;
 $color-error: #EF4444;
 
+// Transparent surfaces and shadows
+$color-white: #FFF;
+$color-black: #000;
+$color-surface-faint: rgba(255, 255, 255, 0.025);
+$color-surface-subtle: rgba(255, 255, 255, 0.03);
+$color-surface-muted: rgba(255, 255, 255, 0.04);
+$color-surface-soft: rgba(255, 255, 255, 0.06);
+$color-border-soft: rgba(255, 255, 255, 0.1);
+$color-border-medium: rgba(255, 255, 255, 0.12);
+$color-border-strong: rgba(255, 255, 255, 0.14);
+$color-border-hover: rgba(255, 255, 255, 0.3);
+$color-shadow: rgba(8, 11, 30, 1);
+$color-placeholder-surface: rgba(10, 21, 39, 0.96);
+
 $body-bg: $color-bg-primary;
 $card-bg: $color-bg-surface;
 $button-primary-bg: $color-accent-primary;
@@ -56,3 +89,39 @@ $button-primary-text: $color-text-primary;
 $link-color: $color-accent-secondary;
 $link-hover-color: color.adjust($color-accent-secondary, $lightness: 10%);
 
+// Spacing scale
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 0.75rem;
+$space-4: 1rem;
+$space-5: 1.25rem;
+$space-6: 1.5rem;
+$space-8: 2rem;
+$space-10: 2.5rem;
+$space-12: 3rem;
+$space-16: 4rem;
+$space-20: 5rem;
+
+// Shape and layout
+$radius-control: 5px;
+$radius-card: 1rem;
+$radius-panel: 1.5rem;
+$radius-image: 16px;
+$radius-pill: 999px;
+$container-content: 1200px;
+$container-wide: 1280px;
+$container-page: 1440px;
+$container-form: 850px;
+$container-copy: 760px;
+$container-description: 750px;
+
+// Responsive breakpoints
+$breakpoint-phone-small: 520px;
+$breakpoint-phone: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-tablet-wide: 900px;
+$breakpoint-desktop: 1024px;
+
+// Motion
+$transition-fast: 150ms ease;
+$transition-standard: 300ms;

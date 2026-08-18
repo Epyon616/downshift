@@ -1,7 +1,9 @@
+@use '../../Sass/Abstracts/Variables' as *;
+
 .logo-container {
   font-size: 10vw;
   letter-spacing: 0;
-  font-weight: 100;
+  font-weight: $font-weight-thin;
 
   .logo {
     max-width: 10vw;
@@ -11,10 +13,10 @@
   }
 
   strong {
-    font-weight: 900;
+    font-weight: $font-weight-black;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $breakpoint-desktop) {
     font-size: 15vw;
   }
 }

@@ -6,7 +6,7 @@
 
   .scroll {
     position: absolute;
-    bottom: 2rem;
+    bottom: $space-8;
     left: 50%;
 
     display: flex;
@@ -16,9 +16,9 @@
 
     transform: translateX(-50%);
 
-    color: #fff;
+    color: $color-white;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: $font-weight-medium;
     letter-spacing: 0.15em;
     text-transform: uppercase;
 
@@ -27,7 +27,7 @@
 
       .scroll-indicator__arrow {
         display: block;
-        font-size: 0.75rem;
+        font-size: $font-size-caption;
 
         animation: scroll-hint 1.8s ease-in-out infinite;
       }
@@ -38,15 +38,15 @@
     display: block;
     margin: 16% auto 30px auto;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $breakpoint-desktop) {
       margin-top: 70%;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $breakpoint-tablet) {
     .intro {
       h1 {
-        font-size: 1.4rem;
+        font-size: $font-size-display-small;
       }
     }
   }     

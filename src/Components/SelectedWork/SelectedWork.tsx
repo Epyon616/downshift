@@ -5,17 +5,16 @@ import { ConfigContext } from '../Contexts';
 import { SelectedWorkProps } from '../Contexts/ConfigContext/types';
 
 const SelectedWork = () => {
-  const { configs: { work: {  selectedWork } } } = useContext(ConfigContext);
+  const { configs: { work: { selectedWork }, content: { selectedWork: copy, technologyListSuffix } } } = useContext(ConfigContext);
 
   return (
-    <section className="selected-work" aria-labelledby="selected-work-title" id="selected-work">
+    <section className="selected-work" aria-labelledby="selected-work-title" id="selected-work" tabIndex={-1}>
       <div className="selected-work__inner">
         <div className="selected-work__header">
-          <h2 id="selected-work-title">Selected work</h2>
+          <h2 id="selected-work-title">{copy.title}</h2>
 
           <p>
-            A selection of projects that show how I approach product development,
-            architecture and complex engineering problems.
+            {copy.description}
           </p>
         </div>
 
@@ -33,15 +32,15 @@ const SelectedWork = () => {
 
               <ul
                 className="project-card__technologies"
-                aria-label={`${project.title} technologies`}
+                aria-label={`${project.title} ${technologyListSuffix}`}
               >
                 {project.technologies.map((technology : string) => (
                   <li key={technology}>{technology}</li>
                 ))}
               </ul>
 
-              <Link className="project-card__link" to={project.href}>
-                View case study <span aria-hidden="true">→</span>
+              <Link className="project-card__link" state={{ scrollTo: 'case-study-page-top' }} to={project.href} >
+                {copy.linkLabel} <span aria-hidden="true">→</span>
               </Link>
             </article>
           ))}

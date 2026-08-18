@@ -1,29 +1,31 @@
+@use '../../Sass/Abstracts/Variables' as *;
+
 .clients {
   margin: 35px 0;
 
   h2 {
     font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.1;
+    line-height: $line-height-tight;
   }
   p {
-    font-size: 1.125rem;
-    line-height: 1.6;
+    font-size: $font-size-body-lg;
+    line-height: $line-height-copy;
   }
   .logos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: $space-4;
 
     .logo {
       margin: 5px;
-      border-radius: 16px;
+      border-radius: $radius-image;
       max-width: 350px;
     }
-    @media (max-width: 900px) {
+    @media (max-width: $breakpoint-tablet-wide) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: $breakpoint-phone-small) {
       grid-template-columns: 1fr;
     }
   }

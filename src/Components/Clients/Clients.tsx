@@ -6,25 +6,26 @@ import onTheBeachLogo from '../../Assets/client-logos/on-the-beach.png';
 import visfoLogo from '../../Assets/client-logos/visfo-health.png';
 import './Clients.scss';
 
-const ClientList = () => (
+const ClientList = () => {
+  const { configs: { content: { clients } } } = useContext(ConfigContext);
+  const logos = [visfoLogo, eeLogo, signStixLogo, collectPlusLogo, unboxedLogo, onTheBeachLogo];
+  return (
   <div className="clients">
     <h2>
-      Who I've worked with
+      {clients.title}
     </h2>
     <p>
-      I've worked with teams across healthcare, technology, ecommerce and digital products, helping build, improve and modernise production software.
+      {clients.description}
     </p>
   
     <div className="logos">
-      <img src={visfoLogo} alt="Visfo Health" className="logo" />
-      <img src={eeLogo} alt="EE" className="logo" />
-      <img src={signStixLogo} alt="SignStix" className="logo" />
-      <img src={collectPlusLogo} alt="Collect+" className="logo" />
-      <img src={unboxedLogo} alt="Unboxed" className="logo" />
-      <img src={onTheBeachLogo} alt="On The Beach" className="logo" />
+      {logos.map((logo, index) => <img src={logo} alt={clients.names[index]} className="logo" key={clients.names[index]} />)}
     </div>
   </div>
 
-);
+  );
+};
 
 export default ClientList;
+import { useContext } from 'react';
+import { ConfigContext } from '../Contexts';

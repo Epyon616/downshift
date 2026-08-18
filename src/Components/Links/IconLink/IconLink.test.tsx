@@ -6,9 +6,9 @@ describe('IconLink', () => {
   const linkRef = 'https://example.com';
   const labelText = 'test';
   it('Should render correctly when all props are passed', () => {
-    render(<IconLink href={linkRef} label={labelText} icon={GithubIcon} />);
+    const { container } = render(<IconLink href={linkRef} label={labelText} icon={GithubIcon} />);
 
-    expect(screen.getByRole('img')).toBeInTheDocument();
+    expect(container.querySelector('img')).toHaveAttribute('alt', '');
     expect(screen.getByRole('link')).toHaveAttribute('href', linkRef);
     expect(screen.getByRole('link')).toHaveAttribute('aria-label', labelText); 
   });

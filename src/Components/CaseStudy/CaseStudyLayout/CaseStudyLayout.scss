@@ -1,46 +1,48 @@
+@use '../../../Sass/Abstracts/Variables' as *;
+
 .case-study-layout {
   min-height: 100vh;
 
   &__main {
-    width: min(100%, 1440px);
+    width: min(100%, $container-page);
     min-height: 100vh;
-    margin: 2rem auto 4rem;
+    margin: $space-8 auto $space-16;
   }
 
   &__footer {
-    padding: 2rem 1rem 3rem;
+    padding: $space-8 $space-4 $space-12;
 
     text-align: center;
 
     small {
-      font-size: 0.75rem;
+      font-size: $font-size-caption;
       opacity: 0.7;
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-tablet) {
   .case-study-layout {
     &__main {
-      margin-top: 1rem;
-      margin-bottom: 3rem;
+      margin-top: $space-4;
+      margin-bottom: $space-12;
     }
   }
 }
 
 .case-study-placeholder {
-  width: min(100%, 1280px);
-  margin: 3rem auto;
-  padding: 3rem;
+  width: min(100%, $container-wide);
+  margin: $space-12 auto;
+  padding: $space-12;
 
   text-align: center;
 
-  background: rgba(10, 21, 39, 0.96);
-  border-radius: 1.5rem;
+  background: $color-placeholder-surface;
+  border-radius: $radius-panel;
 
   span {
-    font-size: 0.875rem;
-    font-weight: 600;
+    font-size: $font-size-small;
+    font-weight: $font-weight-semibold;
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }

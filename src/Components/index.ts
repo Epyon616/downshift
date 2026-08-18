@@ -7,4 +7,5 @@ export { default as HeroImage } from './Hero';
 export { default as Header } from './Header';
 export { default as SocialLinks } from './SocialLinks';
 export { default as SelectedWork } from './SelectedWork';
+export { default as SkipLink } from './SkipLink';
 export { CaseStudyHero, CaseStudyLayout, CaseStudySection, CaseStudyStory, CaseStudyNavigation } from './CaseStudy';

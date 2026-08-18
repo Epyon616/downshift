@@ -9,8 +9,16 @@ import './ContactForm.scss';
 
 const ContactForm = () => {
   const { configs } = useContext(ConfigContext);
-  const { contactForm , email, name } = configs;
-  const { labels, enabledButtonLabel, disabledButtonLabel, thankyouMessage }  = contactForm;
+  const { contactForm, email, name } = configs;
+  const {
+    labels,
+    placeholders,
+    enabledButtonLabel,
+    disabledButtonLabel,
+    thankyouMessage,
+    errorMessage,
+    requiredFieldsMessage,
+  } = contactForm;
   const defaultData = {
     name: '',
     email: '',
@@ -19,7 +27,10 @@ const ContactForm = () => {
   };
 
   const [formData, setFormData] = useState<ContactFormState> (defaultData);
-  const [showNotification, setShowNotification] = useState(false);
+  const [notification, setNotification] = useState<{
+    message: string,
+    type: 'success' | 'error'
+  } | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const {name, value} = e.target;
@@ -31,40 +42,44 @@ const ContactForm = () => {
     from_name: formData.name,
     reply_to: formData.email,
     subject: email.subject,
-    message: `${formData.message}\n\n contact details:\n phone: ${formData.contactNo}\n email: ${formData.email}`
+    message: `${formData.message}\n\n ${email.contactDetailsLabel}\n ${email.phoneLabel} ${formData.contactNo}\n ${email.emailLabel} ${formData.email}`
   }
 
   const isDisabled = () => Object.entries(formData).filter(([,v])=> v === '').length > 0;
   const submitLabel = isDisabled() ? disabledButtonLabel : enabledButtonLabel;
 
-  const handleSubmit = async (e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs.send(
-      import.meta.env.VITE_SERVICE_ID, 
-      import.meta.env.VITE_TEMPLATE_ID,
-      messageVars,
-      import.meta.env.VITE_PUBLIC_KEY
-    ).then(
-      () => {
-        setShowNotification(!showNotification);
-        setFormData(defaultData);
-      },
-      (error) => {
-        console.error('FAILED...', error);
-      },
-    );
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        messageVars,
+        import.meta.env.VITE_PUBLIC_KEY
+      );
+      setNotification({ message: thankyouMessage, type: 'success' });
+      setFormData(defaultData);
+    } catch (error) {
+      console.error('FAILED...', error);
+      setNotification({ message: errorMessage, type: 'error' });
+    }
   }
 
   return (
     <div className="contact-form">
-      <Notification showNotification={showNotification} message={thankyouMessage} />
-      <form method="POST">
+      <Notification
+        showNotification={notification !== null}
+        message={notification?.message ?? ''}
+        type={notification?.type}
+      />
+      <form method="POST" onSubmit={handleSubmit} aria-describedby="required-fields-message">
+        <p id="required-fields-message">{requiredFieldsMessage}</p>
         <TextInput 
           label={labels.nameLabel} 
-          type="name" 
+          type="text"
           fieldName="name" 
-          placeholderText="Your name" 
+          placeholderText={placeholders.name}
           handleChange={handleChange} 
           value={formData.name} 
           required 
@@ -73,7 +88,7 @@ const ContactForm = () => {
           label={labels.emailLabel} 
           type="email" 
           fieldName="email" 
-          placeholderText="name@domain.com" 
+          placeholderText={placeholders.email}
           handleChange={handleChange} 
           value={formData.email} 
           required 
@@ -82,7 +97,7 @@ const ContactForm = () => {
           label={labels.contactNumberLabel}
           type="tel"
           fieldName="contactNo"
-          placeholderText="Your contact number"
+          placeholderText={placeholders.contactNumber}
           handleChange={handleChange}
           value={formData.contactNo}
           required
@@ -90,14 +105,13 @@ const ContactForm = () => {
         <TextArea 
           label={labels.messageLabel} 
           fieldName="message" 
-          placeholderText="Tell me a little about the role or project..." 
+          placeholderText={placeholders.message}
           handleChange={(e) => handleChange(e)} 
           value={formData.message} 
           required 
         />
         <SubmitButton 
           value={submitLabel} 
-          handleSubmit={(e) => handleSubmit(e)}
           disabled={isDisabled()}
         />
       </form>
